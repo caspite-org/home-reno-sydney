@@ -15,13 +15,14 @@ export const Header = () => {
   ]
 
   return (
-    <header className="sticky top-0 z-50 bg-[var(--color-background)] shadow-[var(--shadow-level-2)]">
+    <header className="sticky top-0 z-50 bg-[var(--color-background)]/95 backdrop-blur-md border-b border-[var(--color-tertiary-container)]">
       <Container>
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link
             href="/"
-            className="text-[var(--font-size-headline-md)] font-bold text-[var(--color-primary)] hover:text-[var(--color-primary-dark)] transition-colors"
+            className="text-2xl font-bold text-[var(--color-tertiary)] hover:text-[var(--color-primary)] transition-colors"
+            style={{ fontFamily: 'var(--font-fraunces), serif' }}
           >
             Home Reno Sydney
           </Link>
@@ -32,14 +33,14 @@ export const Header = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-[var(--font-size-body-lg)] font-medium text-[var(--color-on-surface)] hover:text-[var(--color-primary)] transition-colors"
+                className="text-base font-medium text-[var(--color-on-surface-variant)] hover:text-[var(--color-primary)] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[var(--color-primary)] hover:after:w-full after:transition-all after:duration-300"
               >
                 {link.label}
               </Link>
             ))}
             <Link
               href="/#contact"
-              className="inline-flex items-center justify-center px-6 py-3 text-[var(--font-size-label-lg)] font-medium rounded-[var(--radius-expressive-lg)] bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-dark)] shadow-[var(--shadow-level-2)] transition-all duration-200"
+              className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold rounded-full bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-dark)] shadow-md hover:shadow-lg transition-all duration-300"
             >
               Get Quote
             </Link>
@@ -71,13 +72,13 @@ export const Header = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <nav className="md:hidden pb-4 space-y-2">
+          <nav className="md:hidden pb-4 space-y-2 animate-in fade-in slide-in-from-top-2 duration-300">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block px-4 py-3 text-[var(--font-size-body-lg)] font-medium text-[var(--color-on-surface)] hover:bg-[var(--color-surface)] rounded-[var(--radius-expressive-md)] transition-colors"
+                className="block px-4 py-3 text-base font-medium text-[var(--color-on-surface)] hover:bg-[var(--color-surface)] rounded-xl transition-colors"
               >
                 {link.label}
               </Link>
@@ -85,7 +86,7 @@ export const Header = () => {
             <Link
               href="/#contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="block text-center px-4 py-3 text-[var(--font-size-label-lg)] font-medium rounded-[var(--radius-expressive-lg)] bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-dark)] shadow-[var(--shadow-level-2)] transition-all duration-200"
+              className="block text-center px-4 py-3 text-sm font-semibold rounded-full bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-dark)] shadow-md transition-all duration-300"
             >
               Get Quote
             </Link>
