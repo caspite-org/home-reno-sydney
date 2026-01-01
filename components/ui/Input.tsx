@@ -26,7 +26,7 @@ export const Input = ({
       {label && (
         <label
           htmlFor={inputId}
-          className="block text-sm font-semibold text-gray-900 mb-3"
+          className="block text-sm font-semibold text-gray-900 mb-4"
         >
           {label}
         </label>
@@ -34,7 +34,7 @@ export const Input = ({
       <input
         id={inputId}
         className={cn(
-          'w-full px-5 py-4 rounded-2xl text-base',
+          'w-full px-6 py-5 rounded-2xl text-base',
           'border-2 transition-all duration-300',
           'text-gray-900 bg-white',
           'placeholder:text-gray-500',

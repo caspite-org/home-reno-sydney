@@ -28,16 +28,17 @@ export const Card = ({
       'bg-[var(--color-background)] border-2 border-gray-200',
   }
 
-  const paddings = {
-    none: '',
-    sm: 'p-4 md:p-6',
-    md: 'p-6 md:p-8',
-    lg: 'p-8 md:p-10',
+  const paddingValues = {
+    none: '0',
+    sm: 'clamp(24px, 3vw, 32px)',
+    md: 'clamp(32px, 4vw, 48px)',
+    lg: 'clamp(48px, 5vw, 64px)',
   }
 
   return (
     <div
-      className={cn(baseStyles, variants[variant], paddings[padding], className)}
+      className={cn(baseStyles, variants[variant], className)}
+      style={{ padding: paddingValues[padding] }}
       {...props}
     >
       {children}

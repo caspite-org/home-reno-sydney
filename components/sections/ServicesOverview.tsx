@@ -39,12 +39,12 @@ export const ServicesOverview = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   return (
-    <section className="py-24 md:py-32 bg-white relative overflow-hidden">
+    <section className="py-32 md:py-48 bg-white relative overflow-hidden">
       {/* Decorative background element */}
-      <div className="absolute top-20 left-0 w-72 h-72 bg-[var(--color-secondary-container)] rounded-full blur-3xl opacity-40" />
+      <div className="absolute top-20 left-0 w-72 h-72 bg-[var(--color-secondary-container)] rounded-full blur-xl opacity-40" />
 
       <Container>
-        <div className="mb-16 md:mb-20 max-w-3xl">
+        <div className="mb-24 md:mb-28 px-6 md:px-0" style={{ maxWidth: '48rem' }}>
           <span className="text-[var(--color-primary)] text-sm font-semibold tracking-[0.15em] uppercase mb-4 block">
             What We Offer
           </span>
@@ -57,13 +57,14 @@ export const ServicesOverview = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-20 mb-24 px-6 md:px-0">
           {services.map((service, index) => (
             <div
               key={service.title}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
-              className="group relative bg-[var(--color-surface)] rounded-3xl p-8 md:p-10 border-2 border-[var(--color-tertiary-container)] hover:border-[var(--color-primary)] transition-all duration-300 hover:shadow-2xl"
+              className="group relative bg-[var(--color-surface)] rounded-3xl border-2 border-[var(--color-tertiary-container)] hover:border-[var(--color-primary)] transition-all duration-300 hover:shadow-2xl"
+              style={{ padding: 'clamp(48px, 5vw, 80px)' }}
             >
               {/* Large decorative number */}
               <div
@@ -78,7 +79,7 @@ export const ServicesOverview = () => {
               </div>
 
               <div className="relative z-10">
-                <div className="mb-6">
+                <div className="mb-10 md:mb-12">
                   <span
                     className="text-3xl font-bold transition-all duration-300"
                     style={{
@@ -92,17 +93,17 @@ export const ServicesOverview = () => {
                   </span>
                 </div>
 
-                <h3 className="text-2xl md:text-3xl font-bold text-[var(--color-tertiary)] mb-4 leading-tight">
+                <h3 className="text-2xl md:text-3xl font-bold text-[var(--color-tertiary)] mb-8 leading-tight">
                   {service.title}
                 </h3>
 
-                <p className="text-base md:text-lg text-[var(--color-on-surface-variant)] leading-relaxed mb-6">
+                <p className="text-base md:text-lg text-[var(--color-on-surface-variant)] leading-loose mb-10">
                   {service.description}
                 </p>
 
                 {/* Decorative line */}
                 <div
-                  className="h-1 rounded-full transition-all duration-500"
+                  className="h-1 rounded-full transition-all duration-200"
                   style={{
                     backgroundColor: service.color,
                     width: hoveredIndex === index ? '60px' : '40px',

@@ -21,13 +21,13 @@ export const ContactForm = () => {
   }
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-[var(--color-primary-container)] relative overflow-hidden">
+    <section id="contact" className="py-32 md:py-48 bg-[var(--color-primary-container)] relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[var(--color-primary)] opacity-5 rounded-full blur-3xl" />
-      <div className="absolute top-20 left-10 w-64 h-64 bg-[var(--color-secondary)] opacity-5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[var(--color-primary)] opacity-5 rounded-full blur-xl" />
+      <div className="absolute top-20 left-10 w-64 h-64 bg-[var(--color-secondary)] opacity-5 rounded-full blur-xl" />
 
       <Container size="md">
-        <div className="text-center mb-16 md:mb-20 relative z-10">
+        <div className="text-center mb-24 md:mb-28 relative z-10 px-6 md:px-0">
           <span className="text-[var(--color-primary)] text-sm font-semibold tracking-[0.15em] uppercase mb-4 block">
             Let's Talk
           </span>
@@ -35,14 +35,14 @@ export const ContactForm = () => {
             Start Your
             <span className="block text-[var(--color-primary)] italic">Transformation</span>
           </h2>
-          <p className="text-lg md:text-xl text-[var(--color-on-surface-variant)] leading-relaxed max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-[var(--color-on-surface-variant)] leading-relaxed mx-auto" style={{ maxWidth: '42rem' }}>
             Tell us about your vision and we'll get back to you within 24 hours with a personalized quote
           </p>
         </div>
 
-        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-[var(--color-tertiary-container)] relative z-10">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="bg-white rounded-3xl shadow-2xl border border-[var(--color-tertiary-container)] relative z-10 mx-6 md:mx-0" style={{ padding: 'clamp(48px, 5vw, 80px)' }}>
+          <form onSubmit={handleSubmit} className="space-y-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <Input
                 label="First Name"
                 type="text"
@@ -133,7 +133,7 @@ export const ContactForm = () => {
               </div>
             )}
 
-            <div className="pt-4">
+            <div className="pt-6">
               <Button
                 type="submit"
                 size="lg"
