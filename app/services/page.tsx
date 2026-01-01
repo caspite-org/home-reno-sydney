@@ -71,10 +71,10 @@ export default function ServicesPage() {
       <Container>
         {/* Hero Section */}
         <div className="max-w-3xl mx-auto text-center mb-16 md:mb-20 px-4">
-          <h1 className="text-[var(--font-size-display-md)] md:text-[var(--font-size-display-lg)] font-bold text-[var(--color-on-surface)] mb-4 md:mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--color-on-surface)] mb-4 md:mb-6">
             Our Services
           </h1>
-          <p className="text-[var(--font-size-title-md)] md:text-[var(--font-size-title-lg)] text-[var(--color-on-surface)] leading-relaxed">
+          <p className="text-lg md:text-xl text-[var(--color-on-surface)] leading-relaxed">
             Comprehensive renovation services for homeowners and property investors across
             Sydney, NSW
           </p>
@@ -87,27 +87,27 @@ export default function ServicesPage() {
               key={service.title}
               variant="elevated"
               padding="lg"
-              className={`hover:shadow-[var(--shadow-level-4)] transition-all duration-300 ${index % 2 === 0 ? 'bg-[var(--color-background)]' : 'bg-[var(--color-surface)]'}`}
+              className={`hover:shadow-xl transition-all duration-300 ${index % 2 === 0 ? 'bg-[var(--color-background)]' : 'bg-white'}`}
             >
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
                 <div className="lg:col-span-1">
                   <div className="text-7xl mb-6">{service.icon}</div>
-                  <h2 className="text-[var(--font-size-headline-md)] font-bold text-[var(--color-on-surface)] mb-4">
+                  <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-on-surface)] mb-4">
                     {service.title}
                   </h2>
-                  <p className="text-[var(--font-size-body-lg)] text-[var(--color-on-surface)] leading-relaxed">
+                  <p className="text-base md:text-lg text-[var(--color-on-surface)] leading-relaxed">
                     {service.description}
                   </p>
                 </div>
                 <div className="lg:col-span-2">
-                  <h3 className="text-[var(--font-size-title-lg)] font-semibold text-[var(--color-on-surface)] mb-4 md:mb-6">
+                  <h3 className="text-xl font-semibold text-[var(--color-on-surface)] mb-4 md:mb-6">
                     What's Included
                   </h3>
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                     {service.features.map((feature) => (
                       <li
                         key={feature}
-                        className="flex items-start gap-3 text-[var(--font-size-body-md)] text-[var(--color-on-surface)] leading-relaxed"
+                        className="flex items-start gap-3 text-sm md:text-base text-[var(--color-on-surface)] leading-relaxed"
                       >
                         <span className="text-[var(--color-success)] mt-1 text-lg">✓</span>
                         <span>{feature}</span>
@@ -124,18 +124,18 @@ export default function ServicesPage() {
         <Card
           variant="elevated"
           padding="lg"
-          className="mt-16 md:mt-20 bg-gradient-to-br from-[var(--color-primary-container)] to-[var(--color-surface)] shadow-[var(--shadow-level-3)]"
+          className="mt-16 md:mt-20 bg-gradient-to-br from-[var(--color-primary-container)] to-white shadow-xl"
         >
           <div className="text-center w-full">
-            <h2 className="text-[var(--font-size-headline-md)] font-bold text-[var(--color-on-surface)] mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-on-surface)] mb-4">
               Ready to Get Started?
             </h2>
-            <p className="text-[var(--font-size-body-lg)] text-[var(--color-on-surface)] mb-6 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-[var(--color-on-surface)] mb-6 leading-relaxed max-w-2xl mx-auto">
               Contact us today for a free consultation and quote for your renovation project
             </p>
             <a
               href="/#contact"
-              className="inline-flex items-center justify-center px-8 py-4 text-[var(--font-size-title-md)] font-medium rounded-[var(--radius-expressive-xl)] bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-dark)] shadow-[var(--shadow-level-2)] transition-all duration-200"
+              className="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-2xl bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-dark)] shadow-lg transition-all duration-200"
             >
               Get Free Quote
             </a>
