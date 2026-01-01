@@ -1,53 +1,54 @@
 @import "tailwindcss";
 
 /**
- * Material Design 3 Expressive Theme
+ * Editorial Organic Modernism Design System
  * Home Reno Sydney Brand Identity
+ * Inspired by Australian landscape and sophisticated design
  */
 
 :root {
-  /* Primary Colors */
-  --color-primary: #1e40af;
-  --color-primary-light: #3b82f6;
-  --color-primary-dark: #1e3a8a;
-  --color-primary-container: #dbeafe;
-  --color-on-primary-container: #1e3a8a;
+  /* Primary Colors - Terracotta & Clay */
+  --color-primary: #C4633F;
+  --color-primary-light: #D97B3A;
+  --color-primary-dark: #A54D2E;
+  --color-primary-container: #F9EDE8;
+  --color-on-primary-container: #5C2E1F;
 
-  /* Secondary Colors */
-  --color-secondary: #ea580c;
-  --color-secondary-light: #fb923c;
-  --color-secondary-dark: #c2410c;
-  --color-secondary-container: #fed7aa;
-  --color-on-secondary-container: #7c2d12;
+  /* Secondary Colors - Sage & Eucalyptus */
+  --color-secondary: #7A8A7F;
+  --color-secondary-light: #97A79C;
+  --color-secondary-dark: #5C6B61;
+  --color-secondary-container: #EEF2F0;
+  --color-on-secondary-container: #3A4540;
 
-  /* Tertiary Colors */
-  --color-tertiary: #475569;
-  --color-tertiary-light: #64748b;
-  --color-tertiary-dark: #334155;
-  --color-tertiary-container: #e2e8f0;
-  --color-on-tertiary-container: #0f172a;
+  /* Tertiary Colors - Charcoal & Earth */
+  --color-tertiary: #2D2D2D;
+  --color-tertiary-light: #4A4A4A;
+  --color-tertiary-dark: #1A1A1A;
+  --color-tertiary-container: #E8E6E1;
+  --color-on-tertiary-container: #1A1A1A;
 
-  /* Surface Colors */
-  --color-background: #ffffff;
-  --color-surface: #f8fafc;
-  --color-surface-variant: #f1f5f9;
-  --color-surface-tint: #1e40af;
-  --color-on-surface: #0f172a;
-  --color-on-surface-variant: #475569;
+  /* Surface Colors - Warm Neutrals */
+  --color-background: #F9F6F2;
+  --color-surface: #FFFFFF;
+  --color-surface-variant: #F4F1ED;
+  --color-surface-tint: #C4633F;
+  --color-on-surface: #2D2D2D;
+  --color-on-surface-variant: #5C5C5C;
 
   /* Error Colors */
-  --color-error: #dc2626;
-  --color-error-light: #ef4444;
-  --color-error-dark: #b91c1c;
-  --color-error-container: #fee2e2;
-  --color-on-error-container: #7f1d1d;
+  --color-error: #C44536;
+  --color-error-light: #D96459;
+  --color-error-dark: #A33729;
+  --color-error-container: #F9E8E6;
+  --color-on-error-container: #5C1F1A;
 
   /* Success Colors */
-  --color-success: #16a34a;
-  --color-success-light: #22c55e;
-  --color-success-dark: #15803d;
-  --color-success-container: #d1fae5;
-  --color-on-success-container: #14532d;
+  --color-success: #5C8A6F;
+  --color-success-light: #7AA38B;
+  --color-success-dark: #476B58;
+  --color-success-container: #E8F2ED;
+  --color-on-success-container: #2A4538;
 }
 
 @theme inline {
@@ -141,11 +142,38 @@
 body {
   background-color: var(--color-background);
   color: var(--color-on-surface);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-hanken), -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: var(--font-size-body-lg);
-  line-height: 1.6;
+  line-height: 1.7;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-fraunces), serif;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* Subtle grain texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.03;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='3.5' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
 }
 
 /* Remove dark mode (not needed for MVP) */
