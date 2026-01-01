@@ -21,18 +21,26 @@ export const ContactForm = () => {
   }
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-gradient-to-br from-[var(--color-background)] to-[var(--color-surface)]">
+    <section id="contact" className="py-24 md:py-32 bg-[var(--color-primary-container)] relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[var(--color-primary)] opacity-5 rounded-full blur-3xl" />
+      <div className="absolute top-20 left-10 w-64 h-64 bg-[var(--color-secondary)] opacity-5 rounded-full blur-3xl" />
+
       <Container size="md">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-[var(--font-size-headline-lg)] md:text-[var(--font-size-display-sm)] font-bold text-[var(--color-on-surface)] mb-4 md:mb-6">
-            Get Your Free Quote
+        <div className="text-center mb-16 md:mb-20 relative z-10">
+          <span className="text-[var(--color-primary)] text-sm font-semibold tracking-[0.15em] uppercase mb-4 block">
+            Let's Talk
+          </span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--color-tertiary)] mb-6 leading-tight">
+            Start Your
+            <span className="block text-[var(--color-primary)] italic">Transformation</span>
           </h2>
-          <p className="text-[var(--font-size-body-lg)] md:text-[var(--font-size-title-md)] text-[var(--color-on-surface)] leading-relaxed px-4">
-            Tell us about your project and we'll get back to you within 24 hours
+          <p className="text-lg md:text-xl text-[var(--color-on-surface-variant)] leading-relaxed max-w-2xl mx-auto">
+            Tell us about your vision and we'll get back to you within 24 hours with a personalized quote
           </p>
         </div>
 
-        <Card variant="elevated" padding="lg">
+        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-[var(--color-tertiary-container)] relative z-10">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Input
@@ -70,7 +78,7 @@ export const ContactForm = () => {
             <div>
               <label
                 htmlFor="projectType"
-                className="block text-[var(--font-size-label-lg)] font-medium text-[var(--color-on-surface)] mb-2"
+                className="block text-sm font-semibold text-[var(--color-on-surface)] mb-3"
               >
                 Project Type
               </label>
@@ -78,7 +86,12 @@ export const ContactForm = () => {
                 id="projectType"
                 name="projectType"
                 required
-                className="w-full px-4 py-3 rounded-[var(--radius-expressive-md)] border-2 border-[var(--color-surface-variant)] text-[var(--color-on-surface)] bg-[var(--color-surface)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)] transition-all duration-200"
+                className="w-full px-5 py-4 rounded-2xl border-2 border-[var(--color-tertiary-container)] text-[var(--color-on-surface)] bg-[var(--color-surface)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)] transition-all duration-300 appearance-none cursor-pointer hover:border-[var(--color-primary)] text-base"
+                style={{
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23C4633F' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E")`,
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'right 1.25rem center',
+                }}
               >
                 <option value="">Select a project type</option>
                 <option value="kitchen">Kitchen Renovation</option>
@@ -92,42 +105,46 @@ export const ContactForm = () => {
             <div>
               <label
                 htmlFor="message"
-                className="block text-[var(--font-size-label-lg)] font-medium text-[var(--color-on-surface)] mb-2"
+                className="block text-sm font-semibold text-[var(--color-on-surface)] mb-3"
               >
-                Message
+                Project Details
               </label>
               <textarea
                 id="message"
                 name="message"
-                rows={5}
-                placeholder="Tell us about your project..."
+                rows={6}
+                placeholder="Share your vision, budget range, timeline, and any specific requirements..."
                 required
-                className="w-full px-4 py-3 rounded-[var(--radius-expressive-md)] border-2 border-[var(--color-surface-variant)] text-[var(--color-on-surface)] bg-[var(--color-surface)] placeholder:text-[var(--color-on-surface-variant)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)] transition-all duration-200 resize-none"
+                className="w-full px-5 py-4 rounded-2xl border-2 border-[var(--color-tertiary-container)] text-[var(--color-on-surface)] bg-[var(--color-surface)] placeholder:text-[var(--color-on-surface-variant)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)] transition-all duration-300 resize-none hover:border-[var(--color-primary)] text-base"
               />
             </div>
 
             {submitStatus === 'success' && (
-              <div className="p-4 bg-[var(--color-success-container)] text-[var(--color-on-success-container)] rounded-[var(--radius-expressive-md)]">
-                Thank you! We'll get back to you within 24 hours.
+              <div className="p-5 bg-[var(--color-success-container)] text-[var(--color-on-success-container)] rounded-2xl border-2 border-[var(--color-success)] animate-in fade-in slide-in-from-top-2 duration-300">
+                <p className="font-semibold">Thank you for reaching out!</p>
+                <p className="text-sm mt-1">We'll review your project and get back to you within 24 hours.</p>
               </div>
             )}
 
             {submitStatus === 'error' && (
-              <div className="p-4 bg-[var(--color-error-container)] text-[var(--color-on-error-container)] rounded-[var(--radius-expressive-md)]">
-                Something went wrong. Please try again.
+              <div className="p-5 bg-[var(--color-error-container)] text-[var(--color-on-error-container)] rounded-2xl border-2 border-[var(--color-error)]">
+                <p className="font-semibold">Oops! Something went wrong.</p>
+                <p className="text-sm mt-1">Please try again or email us directly.</p>
               </div>
             )}
 
-            <Button
-              type="submit"
-              size="lg"
-              disabled={isSubmitting}
-              className="w-full md:w-auto"
-            >
-              {isSubmitting ? 'Sending...' : 'Send Message'}
-            </Button>
+            <div className="pt-4">
+              <Button
+                type="submit"
+                size="lg"
+                disabled={isSubmitting}
+                className="w-full bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-dark)] px-10 py-5 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? 'Sending Your Message...' : 'Send Message'}
+              </Button>
+            </div>
           </form>
-        </Card>
+        </div>
       </Container>
     </section>
   )
