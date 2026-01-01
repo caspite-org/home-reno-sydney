@@ -21,13 +21,13 @@ export const ContactForm = () => {
   }
 
   return (
-    <section id="contact" className="py-20 bg-[var(--color-surface)]">
+    <section id="contact" className="py-20 md:py-28 bg-gradient-to-br from-[var(--color-background)] to-[var(--color-surface)]">
       <Container size="md">
-        <div className="text-center mb-12">
-          <h2 className="text-[var(--font-size-headline-lg)] md:text-[var(--font-size-display-sm)] font-bold text-[var(--color-on-surface)] mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-[var(--font-size-headline-lg)] md:text-[var(--font-size-display-sm)] font-bold text-[var(--color-on-surface)] mb-4 md:mb-6">
             Get Your Free Quote
           </h2>
-          <p className="text-[var(--font-size-body-lg)] md:text-[var(--font-size-title-md)] text-[var(--color-on-surface-variant)]">
+          <p className="text-[var(--font-size-body-lg)] md:text-[var(--font-size-title-md)] text-[var(--color-on-surface)] leading-relaxed px-4">
             Tell us about your project and we'll get back to you within 24 hours
           </p>
         </div>

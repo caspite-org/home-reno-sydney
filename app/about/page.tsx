@@ -8,24 +8,24 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="py-20">
+    <div className="py-16 md:py-24 lg:py-28">
       <Container>
         {/* Hero Section */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h1 className="text-[var(--font-size-display-md)] md:text-[var(--font-size-display-lg)] font-bold text-[var(--color-on-surface)] mb-6">
+        <div className="max-w-3xl mx-auto text-center mb-16 md:mb-20 px-4">
+          <h1 className="text-[var(--font-size-display-md)] md:text-[var(--font-size-display-lg)] font-bold text-[var(--color-on-surface)] mb-4 md:mb-6">
             About Home Reno Sydney
           </h1>
-          <p className="text-[var(--font-size-title-md)] md:text-[var(--font-size-title-lg)] text-[var(--color-on-surface-variant)] leading-relaxed">
+          <p className="text-[var(--font-size-title-md)] md:text-[var(--font-size-title-lg)] text-[var(--color-on-surface)] leading-relaxed">
             Your trusted partner for kitchen and bathroom renovations in Sydney, NSW
           </p>
         </div>
 
         {/* Story Section */}
-        <Card variant="elevated" padding="lg" className="mb-12">
-          <h2 className="text-[var(--font-size-headline-md)] font-bold text-[var(--color-on-surface)] mb-6">
+        <Card variant="elevated" padding="lg" className="mb-12 md:mb-16">
+          <h2 className="text-[var(--font-size-headline-md)] font-bold text-[var(--color-on-surface)] mb-4 md:mb-6">
             Our Story
           </h2>
-          <div className="space-y-4 text-[var(--font-size-body-lg)] text-[var(--color-on-surface-variant)] leading-relaxed">
+          <div className="space-y-4 text-[var(--font-size-body-lg)] text-[var(--color-on-surface)] leading-relaxed">
             <p>
               Home Reno Sydney is a licensed kitchen and bathroom renovation contractor
               serving residential clients across Sydney, NSW. We specialize in delivering
@@ -41,39 +41,39 @@ export default function AboutPage() {
         </Card>
 
         {/* Values Grid */}
-        <div className="mb-12">
-          <h2 className="text-[var(--font-size-headline-md)] font-bold text-[var(--color-on-surface)] text-center mb-8">
+        <div className="mb-12 md:mb-16">
+          <h2 className="text-[var(--font-size-headline-md)] font-bold text-[var(--color-on-surface)] text-center mb-8 md:mb-12 px-4">
             Why Choose Us
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card variant="outlined">
-              <div className="text-4xl mb-4">✓</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <Card variant="outlined" className="hover:shadow-[var(--shadow-level-3)] transition-all duration-300">
+              <div className="text-5xl mb-4">✓</div>
               <h3 className="text-[var(--font-size-title-lg)] font-bold text-[var(--color-on-surface)] mb-3">
                 Licensed & Insured
               </h3>
-              <p className="text-[var(--font-size-body-md)] text-[var(--color-on-surface-variant)]">
+              <p className="text-[var(--font-size-body-md)] text-[var(--color-on-surface)] leading-relaxed">
                 Fully licensed renovation contractor with comprehensive insurance coverage
                 and NSW statutory warranties.
               </p>
             </Card>
 
-            <Card variant="outlined">
-              <div className="text-4xl mb-4">🎯</div>
+            <Card variant="outlined" className="hover:shadow-[var(--shadow-level-3)] transition-all duration-300">
+              <div className="text-5xl mb-4">🎯</div>
               <h3 className="text-[var(--font-size-title-lg)] font-bold text-[var(--color-on-surface)] mb-3">
                 ROI Focused
               </h3>
-              <p className="text-[var(--font-size-body-md)] text-[var(--color-on-surface-variant)]">
+              <p className="text-[var(--font-size-body-md)] text-[var(--color-on-surface)] leading-relaxed">
                 We help clients maximize return on investment through smart, design-led
                 renovation solutions.
               </p>
             </Card>
 
-            <Card variant="outlined">
-              <div className="text-4xl mb-4">🏗️</div>
+            <Card variant="outlined" className="hover:shadow-[var(--shadow-level-3)] transition-all duration-300">
+              <div className="text-5xl mb-4">🏗️</div>
               <h3 className="text-[var(--font-size-title-lg)] font-bold text-[var(--color-on-surface)] mb-3">
                 End-to-End Service
               </h3>
-              <p className="text-[var(--font-size-body-md)] text-[var(--color-on-surface-variant)]">
+              <p className="text-[var(--font-size-body-md)] text-[var(--color-on-surface)] leading-relaxed">
                 From initial design consultation through to final construction - we manage
                 every detail of your renovation.
               </p>
@@ -82,12 +82,12 @@ export default function AboutPage() {
         </div>
 
         {/* CTA Section */}
-        <Card variant="elevated" padding="lg" className="bg-[var(--color-primary-container)]">
-          <div className="text-center max-w-2xl mx-auto">
+        <Card variant="elevated" padding="lg" className="bg-gradient-to-br from-[var(--color-primary-container)] to-[var(--color-surface)] shadow-[var(--shadow-level-3)]">
+          <div className="text-center w-full">
             <h2 className="text-[var(--font-size-headline-md)] font-bold text-[var(--color-on-surface)] mb-4">
               Ready to Start Your Renovation?
             </h2>
-            <p className="text-[var(--font-size-body-lg)] text-[var(--color-on-surface-variant)] mb-6">
+            <p className="text-[var(--font-size-body-lg)] text-[var(--color-on-surface)] mb-6 leading-relaxed max-w-2xl mx-auto">
               Get in touch today for a free consultation and quote
             </p>
             <a

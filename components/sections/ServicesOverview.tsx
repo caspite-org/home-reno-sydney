@@ -30,26 +30,26 @@ const services = [
 
 export const ServicesOverview = () => {
   return (
-    <section className="py-20 bg-[var(--color-background)]">
+    <section className="py-20 md:py-28 bg-[var(--color-background)]">
       <Container>
-        <div className="text-center mb-16">
-          <h2 className="text-[var(--font-size-headline-lg)] md:text-[var(--font-size-display-sm)] font-bold text-[var(--color-on-surface)] mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-[var(--font-size-headline-lg)] md:text-[var(--font-size-display-sm)] font-bold text-[var(--color-on-surface)] mb-4 md:mb-6">
             Our Services
           </h2>
-          <p className="text-[var(--font-size-body-lg)] md:text-[var(--font-size-title-md)] text-[var(--color-on-surface-variant)] max-w-2xl mx-auto">
+          <p className="text-[var(--font-size-body-lg)] md:text-[var(--font-size-title-md)] text-[var(--color-on-surface)] max-w-2xl mx-auto leading-relaxed px-4">
             Comprehensive renovation services for homeowners and property investors across
             Sydney
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10 mb-12 md:mb-16">
           {services.map((service) => (
-            <Card key={service.title} variant="elevated">
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-[var(--font-size-title-lg)] font-bold text-[var(--color-on-surface)] mb-3">
+            <Card key={service.title} variant="elevated" className="hover:shadow-[var(--shadow-level-4)] transition-all duration-300">
+              <div className="text-6xl mb-6">{service.icon}</div>
+              <h3 className="text-[var(--font-size-headline-sm)] font-bold text-[var(--color-on-surface)] mb-4">
                 {service.title}
               </h3>
-              <p className="text-[var(--font-size-body-md)] text-[var(--color-on-surface-variant)] leading-relaxed">
+              <p className="text-[var(--font-size-body-lg)] text-[var(--color-on-surface)] leading-relaxed">
                 {service.description}
               </p>
             </Card>

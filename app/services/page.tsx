@@ -67,49 +67,49 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="py-20">
+    <div className="py-16 md:py-24 lg:py-28">
       <Container>
         {/* Hero Section */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h1 className="text-[var(--font-size-display-md)] md:text-[var(--font-size-display-lg)] font-bold text-[var(--color-on-surface)] mb-6">
+        <div className="max-w-3xl mx-auto text-center mb-16 md:mb-20 px-4">
+          <h1 className="text-[var(--font-size-display-md)] md:text-[var(--font-size-display-lg)] font-bold text-[var(--color-on-surface)] mb-4 md:mb-6">
             Our Services
           </h1>
-          <p className="text-[var(--font-size-title-md)] md:text-[var(--font-size-title-lg)] text-[var(--color-on-surface-variant)] leading-relaxed">
+          <p className="text-[var(--font-size-title-md)] md:text-[var(--font-size-title-lg)] text-[var(--color-on-surface)] leading-relaxed">
             Comprehensive renovation services for homeowners and property investors across
             Sydney, NSW
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="space-y-12">
+        <div className="space-y-12 md:space-y-16">
           {services.map((service, index) => (
             <Card
               key={service.title}
               variant="elevated"
               padding="lg"
-              className={index % 2 === 0 ? 'bg-[var(--color-background)]' : 'bg-[var(--color-surface)]'}
+              className={`hover:shadow-[var(--shadow-level-4)] transition-all duration-300 ${index % 2 === 0 ? 'bg-[var(--color-background)]' : 'bg-[var(--color-surface)]'}`}
             >
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
                 <div className="lg:col-span-1">
-                  <div className="text-6xl mb-4">{service.icon}</div>
+                  <div className="text-7xl mb-6">{service.icon}</div>
                   <h2 className="text-[var(--font-size-headline-md)] font-bold text-[var(--color-on-surface)] mb-4">
                     {service.title}
                   </h2>
-                  <p className="text-[var(--font-size-body-lg)] text-[var(--color-on-surface-variant)] leading-relaxed">
+                  <p className="text-[var(--font-size-body-lg)] text-[var(--color-on-surface)] leading-relaxed">
                     {service.description}
                   </p>
                 </div>
                 <div className="lg:col-span-2">
-                  <h3 className="text-[var(--font-size-title-lg)] font-semibold text-[var(--color-on-surface)] mb-4">
+                  <h3 className="text-[var(--font-size-title-lg)] font-semibold text-[var(--color-on-surface)] mb-4 md:mb-6">
                     What's Included
                   </h3>
-                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                     {service.features.map((feature) => (
                       <li
                         key={feature}
-                        className="flex items-start gap-3 text-[var(--font-size-body-md)] text-[var(--color-on-surface-variant)]"
+                        className="flex items-start gap-3 text-[var(--font-size-body-md)] text-[var(--color-on-surface)] leading-relaxed"
                       >
-                        <span className="text-[var(--color-success)] mt-1">✓</span>
+                        <span className="text-[var(--color-success)] mt-1 text-lg">✓</span>
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -124,13 +124,13 @@ export default function ServicesPage() {
         <Card
           variant="elevated"
           padding="lg"
-          className="mt-16 bg-[var(--color-primary-container)]"
+          className="mt-16 md:mt-20 bg-gradient-to-br from-[var(--color-primary-container)] to-[var(--color-surface)] shadow-[var(--shadow-level-3)]"
         >
-          <div className="text-center max-w-2xl mx-auto">
+          <div className="text-center w-full">
             <h2 className="text-[var(--font-size-headline-md)] font-bold text-[var(--color-on-surface)] mb-4">
               Ready to Get Started?
             </h2>
-            <p className="text-[var(--font-size-body-lg)] text-[var(--color-on-surface-variant)] mb-6">
+            <p className="text-[var(--font-size-body-lg)] text-[var(--color-on-surface)] mb-6 leading-relaxed max-w-2xl mx-auto">
               Contact us today for a free consultation and quote for your renovation project
             </p>
             <a
