@@ -18,14 +18,14 @@ export const Card = ({
   children,
   ...props
 }: CardProps) => {
-  const baseStyles = 'rounded-[var(--radius-expressive-lg)] transition-all duration-200'
+  const baseStyles = 'rounded-3xl transition-all duration-200'
 
   const variants = {
-    surface: 'bg-[var(--color-surface)]',
+    surface: 'bg-white',
     elevated:
-      'bg-[var(--color-surface)] shadow-[var(--shadow-level-2)] hover:shadow-[var(--shadow-level-3)]',
+      'bg-white shadow-lg hover:shadow-xl',
     outlined:
-      'bg-[var(--color-background)] border-2 border-[var(--color-surface-variant)]',
+      'bg-[var(--color-background)] border-2 border-gray-200',
   }
 
   const paddings = {

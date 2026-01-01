@@ -34,9 +34,9 @@ export const Button = ({
   }
 
   const sizes = {
-    sm: 'px-4 py-2 text-[var(--font-size-label-md)] rounded-[var(--radius-expressive-md)]',
-    md: 'px-6 py-3 text-[var(--font-size-label-lg)] rounded-[var(--radius-expressive-lg)]',
-    lg: 'px-8 py-4 text-[var(--font-size-title-md)] rounded-[var(--radius-expressive-xl)]',
+    sm: 'px-4 py-2 text-xs rounded-xl',
+    md: 'px-6 py-3 text-sm rounded-2xl',
+    lg: 'px-8 py-4 text-base rounded-2xl',
   }
 
   return (

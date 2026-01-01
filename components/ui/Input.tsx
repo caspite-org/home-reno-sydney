@@ -26,7 +26,7 @@ export const Input = ({
       {label && (
         <label
           htmlFor={inputId}
-          className="block text-[var(--font-size-label-lg)] font-medium text-[var(--color-on-surface)] mb-2"
+          className="block text-sm font-semibold text-gray-900 mb-3"
         >
           {label}
         </label>
@@ -34,26 +34,26 @@ export const Input = ({
       <input
         id={inputId}
         className={cn(
-          'w-full px-4 py-3 rounded-[var(--radius-expressive-md)]',
-          'border-2 transition-all duration-200',
-          'text-[var(--color-on-surface)] bg-[var(--color-surface)]',
-          'placeholder:text-[var(--color-on-surface-variant)]',
-          'focus:outline-none focus:ring-2 focus:ring-offset-2',
+          'w-full px-5 py-4 rounded-2xl text-base',
+          'border-2 transition-all duration-300',
+          'text-gray-900 bg-white',
+          'placeholder:text-gray-500',
+          'focus:outline-none focus:ring-2',
           error
-            ? 'border-[var(--color-error)] focus:ring-[var(--color-error)]'
-            : 'border-[var(--color-surface-variant)] focus:border-[var(--color-primary)] focus:ring-[var(--color-primary)]',
+            ? 'border-red-500 focus:ring-red-500 focus:border-red-500'
+            : 'border-gray-200 focus:border-[var(--color-primary)] focus:ring-[var(--color-primary)] hover:border-[var(--color-primary)]',
           'disabled:opacity-50 disabled:cursor-not-allowed',
           className
         )}
         {...props}
       />
       {error && (
-        <p className="mt-1 text-[var(--font-size-body-sm)] text-[var(--color-error)]">
+        <p className="mt-2 text-sm text-red-600">
           {error}
         </p>
       )}
       {helperText && !error && (
-        <p className="mt-1 text-[var(--font-size-body-sm)] text-[var(--color-on-surface-variant)]">
+        <p className="mt-2 text-sm text-gray-600">
           {helperText}
         </p>
       )}
