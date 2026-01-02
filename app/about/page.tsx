@@ -22,7 +22,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div className="aspect-[16/9] relative bg-gray-100 overflow-hidden">
             <Image 
-              src="https://images.unsplash.com/photo-1600585154526-990dcea4db0d?q=80&w=2000&auto=format&fit=crop" 
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop" 
               alt="Architectural detail" 
               fill
               unoptimized
@@ -79,7 +79,7 @@ export default function AboutPage() {
           {[1, 2, 3, 4].map((i) => (
             <div key={i} className="aspect-[3/4] relative bg-gray-100 grayscale hover:grayscale-0 transition-all duration-700 overflow-hidden">
                <Image 
-                src={`https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop&crop=faces`} 
+                src={`https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop`} 
                 alt="Team member"
                 fill
                 unoptimized
