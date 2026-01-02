@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
-import { Manrope } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
 
-const manrope = Manrope({
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-manrope',
+  variable: '--font-inter',
   display: 'swap',
 })
 
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${manrope.variable} antialiased`}>
+    <html lang="en" className={`${inter.variable} antialiased`} suppressHydrationWarning>
       <body className="flex flex-col min-h-screen font-sans">
         <main className="flex-1">{children}</main>
       </body>

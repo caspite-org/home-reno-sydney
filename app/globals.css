@@ -13,6 +13,13 @@
   --text-display-large: 4.5rem;
   --text-display: 3rem;
   --text-body-large: 1.125rem;
+
+  /* Precision Theme Colors */
+  --color-grid-line: rgba(17, 17, 17, 0.08); /* Faint grey for light mode */
+  --color-circle-border: rgba(17, 17, 17, 0.08);
+
+  /* Fonts */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /* Base Styles */
