@@ -1,7 +1,15 @@
+import { Navbar } from '@/components/ui/Navbar'
+import { Hero } from '@/components/sections/Hero'
+import { ServicesScroll } from '@/components/sections/ServicesScroll'
+import { Contact } from '@/components/sections/Contact'
+
 export default function HomePage() {
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <h1 className="text-4xl font-bold">Project Reset</h1>
-    </div>
+    <>
+      <Navbar />
+      <Hero />
+      <ServicesScroll />
+      <Contact />
+    </>
   )
 }

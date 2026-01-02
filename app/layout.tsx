@@ -1,31 +1,16 @@
 import type { Metadata } from 'next'
-import { Fraunces, Hanken_Grotesk, JetBrains_Mono } from 'next/font/google'
+import { Manrope } from 'next/font/google'
 import './globals.css'
 
-const fraunces = Fraunces({
+const manrope = Manrope({
   subsets: ['latin'],
-  weight: ['300', '400', '600', '700', '900'],
-  variable: '--font-fraunces',
-  display: 'swap',
-})
-
-const hankenGrotesk = Hanken_Grotesk({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-hanken',
-  display: 'swap',
-})
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  variable: '--font-jetbrains',
+  variable: '--font-manrope',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
-  title: 'Home Reno Sydney',
-  description: 'Kitchen and bathroom renovation',
+  title: 'Home Reno Sydney | Architectural Renovations',
+  description: 'Premium home, kitchen, and bathroom renovations in Sydney.',
 }
 
 export default function RootLayout({
@@ -34,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${hankenGrotesk.variable} ${jetbrainsMono.variable}`}>
-      <body className="flex flex-col min-h-screen">
+    <html lang="en" className={`${manrope.variable} antialiased`}>
+      <body className="flex flex-col min-h-screen font-sans">
         <main className="flex-1">{children}</main>
       </body>
     </html>
