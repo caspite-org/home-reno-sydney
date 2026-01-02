@@ -1,13 +1,7 @@
-import { Hero } from '@/components/sections/Hero'
-import { ServicesOverview } from '@/components/sections/ServicesOverview'
-import { ContactForm } from '@/components/forms/ContactForm'
-
 export default function HomePage() {
   return (
-    <>
-      <Hero />
-      <ServicesOverview />
-      <ContactForm />
-    </>
+    <div className="flex items-center justify-center min-h-screen">
+      <h1 className="text-4xl font-bold">Project Reset</h1>
+    </div>
   )
 }

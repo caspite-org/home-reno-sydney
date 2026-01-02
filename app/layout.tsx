@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Fraunces, Hanken_Grotesk, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
-import { Header, Footer } from '@/components'
 
 const fraunces = Fraunces({
   subsets: ['latin'],
@@ -25,15 +24,8 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Home Reno Sydney | Kitchen & Bathroom Renovations',
-  description:
-    'Licensed kitchen and bathroom renovation contractor in Sydney, NSW. Expert design and construction services for residential clients.',
-  keywords: [
-    'kitchen renovation Sydney',
-    'bathroom renovation Sydney',
-    'home renovation',
-    'interior design Sydney',
-  ],
+  title: 'Home Reno Sydney',
+  description: 'Kitchen and bathroom renovation',
 }
 
 export default function RootLayout({
@@ -44,9 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${fraunces.variable} ${hankenGrotesk.variable} ${jetbrainsMono.variable}`}>
       <body className="flex flex-col min-h-screen">
-        <Header />
         <main className="flex-1">{children}</main>
-        <Footer />
       </body>
     </html>
   )
