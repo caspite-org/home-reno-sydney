@@ -1,15 +1,18 @@
 'use client';
 
 import Link from 'next/link';
-import { MouseEvent } from 'react';
+import { useState } from 'react';
 import { Button } from './Button';
 
 export function Navbar() {
-  const handleScroll = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const targetId = href.replace('#', '');
     const elem = document.getElementById(targetId);
     elem?.scrollIntoView({ behavior: 'smooth' });
+    setIsMenuOpen(false);
   };
 
   return (
@@ -27,12 +30,15 @@ export function Navbar() {
           <Link href="/services" className="hover:opacity-70 transition-opacity">
             Services
           </Link>
-          <a href="/#projects" onClick={(e) => handleScroll(e, '#projects')} className="hover:opacity-70 transition-opacity">
+          <Link href="/about" className="hover:opacity-70 transition-opacity">
+            About
+          </Link>
+          <Link href="/#projects" onClick={(e) => handleScroll(e, '#projects')} className="hover:opacity-70 transition-opacity">
             Projects
-          </a>
-          <a href="/#contact" onClick={(e) => handleScroll(e, '#contact')} className="hover:opacity-70 transition-opacity">
+          </Link>
+          <Link href="/#contact" onClick={(e) => handleScroll(e, '#contact')} className="hover:opacity-70 transition-opacity">
             Contact
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -46,10 +52,41 @@ export function Navbar() {
         Get a Quote
       </Button>
       
-      {/* Mobile Menu Toggle - Blend Mode needed? Probably yes as it replaces links */}
-      <button className="md:hidden pointer-events-auto mix-blend-exclusion text-white uppercase text-xs font-bold">
-        Menu
+      
+      {/* Mobile Menu Toggle */}
+      <button 
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        aria-label="Toggle menu"
+        className="md:hidden pointer-events-auto mix-blend-exclusion text-white uppercase text-xs font-bold z-50"
+      >
+        {isMenuOpen ? 'Close' : 'Menu'}
       </button>
+
+      {/* Mobile Menu Overlay */}
+      <div className={`fixed inset-0 bg-white z-40 transition-transform duration-500 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
+        <div className="flex flex-col items-center justify-center h-full gap-8 text-2xl font-bold uppercase tracking-tighter">
+          <Link href="/services" onClick={() => setIsMenuOpen(false)} className="hover:opacity-70">
+            Services
+          </Link>
+          <Link href="/about" onClick={() => setIsMenuOpen(false)} className="hover:opacity-70">
+            About
+          </Link>
+          <Link href="/#projects" onClick={(e) => handleScroll(e, '#projects')} className="hover:opacity-70">
+            Projects
+          </Link>
+          <Link href="/#contact" onClick={(e) => handleScroll(e, '#contact')} className="hover:opacity-70">
+            Contact
+          </Link>
+          <Button 
+            href="/#contact" 
+            variant="primary"
+            className="mt-8"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Get a Quote
+          </Button>
+        </div>
+      </div>
     </nav>
   );
 }

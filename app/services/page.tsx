@@ -1,48 +1,11 @@
 import { Navbar } from '@/components/ui/Navbar'
 import Link from 'next/link'
+import Image from 'next/image'
+
+import { SERVICES } from '@/lib/data/services';
 
 export default function ServicesPage() {
-  const services = [
-    {
-      id: 'structural',
-      title: 'Structural Renovation',
-      description: 'We specialize in transformative structural changes that redefine the flow and function of your home. From opening up living spaces to complex extensions, our architectural approach ensures seamless integration.',
-      features: [
-        'Open-plan living configurations',
-        'Load-bearing wall removal',
-        'Second-story additions',
-        'Ground-floor extensions',
-        'Structural remediation'
-      ],
-      image: 'https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop'
-    },
-    {
-      id: 'kitchen',
-      title: 'Bespoke Kitchens',
-      description: 'The heart of the home, reimagined. Our kitchen designs blend high-performance functionality with breathable, minimalist aesthetics using premium natural materials.',
-      features: [
-        'Custom joinery design',
-        'Natural stone benchtops',
-        'Smart appliance integration',
-        'Butler’s pantry layout',
-        'Lighting plans'
-      ],
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop'
-    },
-    {
-      id: 'bathroom',
-      title: 'Luxury Bathrooms',
-      description: 'Create a sanctuary within your home. We design spa-inspired bathrooms that focus on material texture, light, and relaxation.',
-      features: [
-        'Walk-in rain showers',
-        'Freestanding baths',
-        'Custom vanity units',
-        'Underfloor heating',
-        'Natural light optimization'
-      ],
-      image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=2000&auto=format&fit=crop'
-    }
-  ];
+  const services = SERVICES;
 
   return (
     <>
@@ -66,10 +29,12 @@ export default function ServicesPage() {
               
               {/* Image */}
               <div className="w-full lg:w-1/2 aspect-[4/3] relative overflow-hidden bg-gray-200">
-                <img 
+                <Image 
                   src={service.image} 
                   alt={service.title}
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  fill
+                  unoptimized
+                  className="object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
 
@@ -79,7 +44,7 @@ export default function ServicesPage() {
                   {service.title}
                 </h2>
                 <p className="text-xl md:text-2xl leading-relaxed text-[var(--color-muted)] mb-12 max-w-xl">
-                  {service.description}
+                  {service.fullDescription}
                 </p>
                 
                 <div className="mb-12">

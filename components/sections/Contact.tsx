@@ -4,7 +4,8 @@ import { useState } from 'react';
 
 export function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
     phone: '',
     projectType: '',
@@ -19,7 +20,7 @@ export function Contact() {
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1500));
     setStatus('success');
-    setFormData({ name: '', email: '', phone: '', projectType: '', budget: '', message: '' });
+    setFormData({ firstName: '', lastName: '', email: '', phone: '', projectType: '', budget: '', message: '' });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -54,14 +55,28 @@ export function Contact() {
               <div className="relative">
                 <input
                   type="text"
-                  name="name"
+                  name="firstName"
                   required
-                  placeholder="NAME"
-                  value={formData.name}
+                  placeholder="FIRST NAME"
+                  value={formData.firstName}
                   onChange={handleChange}
                   className="w-full bg-transparent border-b border-[var(--color-border)] py-4 text-lg focus:outline-none focus:border-black transition-colors placeholder:text-[var(--color-muted)] placeholder:text-sm placeholder:font-bold placeholder:tracking-widest"
                 />
               </div>
+              <div className="relative">
+                <input
+                  type="text"
+                  name="lastName"
+                  required
+                  placeholder="LAST NAME"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  className="w-full bg-transparent border-b border-[var(--color-border)] py-4 text-lg focus:outline-none focus:border-black transition-colors placeholder:text-[var(--color-muted)] placeholder:text-sm placeholder:font-bold placeholder:tracking-widest"
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div className="relative">
                 <input
                   type="email"
@@ -73,9 +88,6 @@ export function Contact() {
                   className="w-full bg-transparent border-b border-[var(--color-border)] py-4 text-lg focus:outline-none focus:border-black transition-colors placeholder:text-[var(--color-muted)] placeholder:text-sm placeholder:font-bold placeholder:tracking-widest"
                 />
               </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div className="relative">
                 <input
                   type="tel"
@@ -86,22 +98,22 @@ export function Contact() {
                   className="w-full bg-transparent border-b border-[var(--color-border)] py-4 text-lg focus:outline-none focus:border-black transition-colors placeholder:text-[var(--color-muted)] placeholder:text-sm placeholder:font-bold placeholder:tracking-widest"
                 />
               </div>
-              <div className="relative">
-                 <select
-                  name="projectType"
-                  required
-                  value={formData.projectType}
-                  onChange={handleChange}
-                  className="w-full bg-transparent border-b border-[var(--color-border)] py-4 text-lg focus:outline-none focus:border-black transition-colors text-[var(--foreground)]"
-                >
-                  <option value="" disabled>PROJECT TYPE</option>
-                  <option value="complete-home">Whole Home Renovation</option>
-                  <option value="kitchen">Kitchen Renovation</option>
-                  <option value="bathroom">Bathroom Renovation</option>
-                  <option value="extension">Extension / Addition</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
+            </div>
+            <div className="relative">
+               <select
+                name="projectType"
+                required
+                value={formData.projectType}
+                onChange={handleChange}
+                className="w-full bg-transparent border-b border-[var(--color-border)] py-4 text-lg focus:outline-none focus:border-black transition-colors text-[var(--foreground)]"
+              >
+                <option value="" disabled>PROJECT TYPE</option>
+                <option value="complete-home">Whole Home Renovation</option>
+                <option value="kitchen">Kitchen Renovation</option>
+                <option value="bathroom">Bathroom Renovation</option>
+                <option value="extension">Extension / Addition</option>
+                <option value="other">Other</option>
+              </select>
             </div>
 
             <div className="relative">

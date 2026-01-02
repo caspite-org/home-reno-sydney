@@ -1,4 +1,3 @@
-import React from "react";
 import { BoxGrid, BoxItem } from "@/components/ui/app-precision/BoxGrid";
 
 const PARTNERS = [

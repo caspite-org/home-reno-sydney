@@ -102,7 +102,7 @@ export function Hero() {
 
       <div className="relative z-10 max-w-[1800px] mx-auto w-full">
         <span className="block text-xs font-bold tracking-[0.25em] uppercase mb-10 text-black/60 animate-[fadeIn_0.8s_ease-out]">
-          Sydney's Architectural Renovation Specialists
+          Sydney&apos;s Architectural Renovation Specialists
         </span>
         
         <h1 className="flex flex-col font-bold leading-[1.05] tracking-[-0.02em] text-black">

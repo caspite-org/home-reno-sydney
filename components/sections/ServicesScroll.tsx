@@ -1,31 +1,15 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
+
+import { SERVICES } from '@/lib/data/services';
 
 export function ServicesScroll() {
-  const services = [
-    {
-      id: '01',
-      title: 'Structural Renovation',
-      description: 'Complete structural transformations, from open-plan living configurations to complex extensions and additions.',
-      image: 'https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop'
-    },
-    {
-      id: '02',
-      title: 'Kitchen Design',
-      description: 'Bespoke kitchen spaces that blend functionality with high-end aesthetic principles and premium materials.',
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop' 
-    },
-    {
-      id: '03',
-      title: 'Bathroom Luxury',
-      description: 'Spa-like sanctuaries created within your home using natural stone, minimalist fixtures, and intelligent lighting.',
-      image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=2000&auto=format&fit=crop'
-    }
-  ];
+  const services = SERVICES;
 
   return (
-    <section id="services" className="relative bg-[var(--color-card)] max-w-[1800px] mx-auto">
+    <section id="services" className="relative bg-[var(--color-background)] max-w-[1800px] mx-auto">
       {/* Split Screen Layout */}
       <div className="flex flex-col lg:flex-row">
         
@@ -39,13 +23,13 @@ export function ServicesScroll() {
             {services.map((service) => (
               <div key={service.id} className="group cursor-pointer">
                 <div className="flex items-baseline gap-4 mb-2">
-                  <span className="text-sm font-mono text-[var(--color-muted)]">{service.id}</span>
+                  <span className="text-sm font-mono text-[var(--color-muted)]">{service.orderId}</span>
                   <h3 className="text-3xl md:text-4xl font-bold group-hover:text-[var(--color-muted)] transition-colors">
                     {service.title}
                   </h3>
                 </div>
                 <p className="text-lg text-[var(--color-muted)] max-w-md ml-10">
-                  {service.description}
+                  {service.shortDescription}
                 </p>
               </div>
             ))}
@@ -63,10 +47,12 @@ export function ServicesScroll() {
           {services.map((service) => (
             <div key={service.id} className="h-[50vh] lg:h-screen sticky top-0 lg:static flex items-center justify-center overflow-hidden border-b border-white/10">
                <div className="relative w-full h-full">
-                 <img 
+                 <Image 
                    src={service.image} 
                    alt={service.title}
-                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                   fill
+                   unoptimized
+                   className="object-cover transition-transform duration-700 hover:scale-105"
                    loading="lazy"
                  />
                  <div className="absolute inset-0 bg-black/10"></div>

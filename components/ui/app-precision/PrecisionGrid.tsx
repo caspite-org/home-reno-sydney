@@ -1,5 +1,3 @@
-import React from "react";
-
 interface PrecisionGridProps {
   className?: string;
   lineColor?: string;

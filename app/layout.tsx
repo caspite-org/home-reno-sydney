@@ -13,6 +13,8 @@ export const metadata: Metadata = {
   description: 'Premium home, kitchen, and bathroom renovations in Sydney.',
 }
 
+import { Footer } from '@/components/ui/Footer'
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -22,6 +24,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} antialiased`} suppressHydrationWarning>
       <body className="flex flex-col min-h-screen font-sans">
         <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   )
