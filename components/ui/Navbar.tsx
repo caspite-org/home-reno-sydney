@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { MouseEvent } from 'react';
+import { Button } from './Button';
 
 export function Navbar() {
   const handleScroll = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -35,13 +36,15 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Solid Button - No Blend Mode */}
-      <Link 
+      {/* Solid Button - Using reusable component */}
+      <Button 
         href="/#contact" 
-        className="pointer-events-auto hidden md:block px-5 py-2.5 bg-[#111] text-white border border-transparent hover:bg-white hover:text-black hover:border-black transition-colors text-xs font-bold uppercase tracking-wider"
+        variant="primary"
+        size="sm"
+        className="hidden md:flex"
       >
         Get a Quote
-      </Link>
+      </Button>
       
       {/* Mobile Menu Toggle - Blend Mode needed? Probably yes as it replaces links */}
       <button className="md:hidden pointer-events-auto mix-blend-exclusion text-white uppercase text-xs font-bold">
