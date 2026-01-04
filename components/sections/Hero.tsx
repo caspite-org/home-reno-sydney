@@ -60,13 +60,13 @@ export function Hero() {
 
             ctx.beginPath();
             ctx.arc(x, y, dotRadius, 0, Math.PI * 2); // Keep size constant
-            ctx.fillStyle = `rgba(0, 0, 0, ${opacity})`;
+            ctx.fillStyle = `rgba(17, 17, 17, ${opacity})`;
             ctx.fill();
           } else {
             // Normal dot
             ctx.beginPath();
             ctx.arc(x, y, dotRadius, 0, Math.PI * 2);
-            ctx.fillStyle = "rgba(0, 0, 0, 0.12)";
+            ctx.fillStyle = "rgba(17, 17, 17, 0.12)";
             ctx.fill();
           }
         }
@@ -85,7 +85,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 pt-24 pb-12 overflow-hidden bg-white">
+    <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 pt-24 pb-12 overflow-hidden bg-background">
       {/* Interactive Dot Grid Canvas */}
       <canvas
         ref={canvasRef}
@@ -101,11 +101,11 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 max-w-[1800px] mx-auto w-full">
-        <span className="block text-xs font-bold tracking-[0.25em] uppercase mb-10 text-black/60 animate-[fadeIn_0.8s_ease-out]">
+        <span className="block text-xs font-bold tracking-[0.25em] uppercase mb-10 text-foreground/60 animate-[fadeIn_0.8s_ease-out]">
           Sydney&apos;s Architectural Renovation Specialists
         </span>
         
-        <h1 className="flex flex-col font-bold leading-[1.05] tracking-[-0.02em] text-black">
+        <h1 className="flex flex-col font-bold leading-[1.05] tracking-[-0.02em] text-foreground">
           <span className="text-[10vw] md:text-[6rem] lg:text-[7.5rem] xl:text-[8.5rem] animate-[slideInLeft_0.8s_ease-out]">
             TRANSFORM
           </span>
@@ -116,9 +116,9 @@ export function Hero() {
         </h1>
 
         <div className="mt-16 md:mt-20 max-w-xl ml-auto md:mr-[12vw] animate-[fadeIn_1s_ease-out_0.3s_both]">
-          <p className="text-base md:text-lg leading-relaxed text-black/80 font-medium mb-10">
+          <p className="text-base md:text-lg leading-relaxed text-foreground/80 font-medium mb-10">
             Precision-engineered renovations that blend architectural excellence with livable design. 
-            <span className="block mt-3 text-black/60">
+            <span className="block mt-3 text-foreground/60">
               Fixed quotes • Transparent timelines • Zero surprises
             </span>
           </p>
@@ -149,8 +149,8 @@ export function Hero() {
       {/* Scroll Indicator */}
       <div className="absolute bottom-12 right-6 md:right-12 animate-bounce">
         <div className="flex flex-col items-center gap-2">
-          <span className="text-xs tracking-wider uppercase text-black/40">Scroll</span>
-          <div className="w-px h-16 bg-gradient-to-b from-black/40 to-transparent" />
+          <span className="text-xs tracking-wider uppercase text-foreground/40">Scroll</span>
+          <div className="w-px h-16 bg-gradient-to-b from-foreground/40 to-transparent" />
         </div>
       </div>
 

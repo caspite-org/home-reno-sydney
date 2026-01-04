@@ -25,8 +25,8 @@ export function BoxItem({ children, className = "" }: BoxItemProps) {
             but standard grid borders usually suffice for this look. 
             We can add subtle corner accents for extra "tech" feel. 
         */}
-        <div className="absolute -top-px -left-px w-2 h-px bg-black/10 group-hover:bg-black/30 transition-colors" />
-        <div className="absolute -top-px -left-px w-px h-2 bg-black/10 group-hover:bg-black/30 transition-colors" />
+        <div className="absolute -top-px -left-px w-2 h-px bg-foreground/10 group-hover:bg-foreground/30 transition-colors" />
+        <div className="absolute -top-px -left-px w-px h-2 bg-foreground/10 group-hover:bg-foreground/30 transition-colors" />
 
         {children}
     </div>

@@ -2,7 +2,7 @@
 
 @theme {
   /* Colors - Warm Monochromatic Scale */
-  --color-background: #F4F4F2;
+  --color-background: #F4F4F4;
   --color-foreground: #111111;
   --color-card: #FFFFFF;
   --color-border: #E5E5E5;
@@ -19,12 +19,12 @@
   --color-circle-border: rgba(17, 17, 17, 0.08);
 
   /* Fonts */
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: var(--font-host-grotesk), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /* Base Styles */
 :root {
-  --background: #F4F4F2;
+  --background: #F4F4F4;
   --foreground: #111111;
 }
 

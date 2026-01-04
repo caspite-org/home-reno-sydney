@@ -16,8 +16,8 @@ export function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-4 md:px-12 md:py-6 bg-[#F4F4F2]/80 backdrop-blur-sm transition-all duration-300">
-      <div className="flex items-center gap-8 text-[#111]">
+    <nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-4 md:px-12 md:py-6 bg-background/80 backdrop-blur-sm transition-all duration-300">
+      <div className="flex items-center gap-8 text-foreground">
         <div className="flex items-center gap-2">
            {/* Simple Architectural Icon/Logo placeholder */}
           <div className="w-4 h-4 bg-current" />

@@ -6,14 +6,14 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-white border-t border-[var(--color-border)] px-6 py-12 md:px-12 md:py-24">
+    <footer className="bg-background border-t border-[var(--color-border)] px-6 py-12 md:px-12 md:py-24">
       <div className="max-w-[1800px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-24">
           
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-8">
-              <div className="w-4 h-4 bg-black" />
+              <div className="w-4 h-4 bg-foreground" />
               <span className="text-xl font-bold tracking-tight uppercase">
                 Home Reno Sydney
               </span>
@@ -25,7 +25,7 @@ export function Footer() {
 
           {/* Links */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-[0.2em] mb-8 text-black">
+            <h4 className="text-xs font-bold uppercase tracking-[0.2em] mb-8 text-foreground">
               Navigation
             </h4>
             <ul className="space-y-4 text-sm font-medium uppercase tracking-wide">
@@ -39,7 +39,7 @@ export function Footer() {
 
           {/* Contact Details */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-[0.2em] mb-8 text-black">
+            <h4 className="text-xs font-bold uppercase tracking-[0.2em] mb-8 text-foreground">
               Contact
             </h4>
             <ul className="space-y-4 text-sm font-medium uppercase tracking-wide">
@@ -56,8 +56,8 @@ export function Footer() {
             © {currentYear} HOME RENO SYDNEY — ALL RIGHTS RESERVED
           </div>
           <div className="flex gap-8 text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--color-muted)]">
-            <Link href="#" className="hover:text-black transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-black transition-colors">Instagram</Link>
+            <Link href="#" className="hover:text-foreground transition-colors">Privacy Policy</Link>
+            <Link href="#" className="hover:text-foreground transition-colors">Instagram</Link>
           </div>
         </div>
       </div>

@@ -72,7 +72,7 @@ export default function ServicesPage() {
             </h2>
             <Link 
               href="/#contact"
-              className="inline-block px-12 py-5 bg-[#111] text-white text-sm font-bold uppercase tracking-widest hover:bg-black/80 transition-colors"
+              className="inline-block px-12 py-5 bg-foreground text-background text-sm font-bold uppercase tracking-widest hover:opacity-80 transition-opacity"
             >
               Get a Quote
             </Link>

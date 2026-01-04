@@ -29,8 +29,8 @@ export function Button({
   const baseClasses = "inline-flex items-center justify-center font-bold uppercase tracking-wider transition-all duration-300";
   
   const variantClasses = {
-    primary: "bg-black text-white border border-transparent hover:bg-white hover:text-black hover:border-black",
-    secondary: "border-2 border-black text-black bg-transparent hover:bg-black hover:text-white",
+    primary: "bg-foreground text-background border border-transparent hover:bg-background hover:text-foreground hover:border-foreground",
+    secondary: "border-2 border-foreground text-foreground bg-transparent hover:bg-foreground hover:text-background",
   };
 
   const sizeClasses = {
