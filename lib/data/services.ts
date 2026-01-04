@@ -53,5 +53,20 @@ export const SERVICES: Service[] = [
       'Natural light optimization'
     ],
     image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=2000&auto=format&fit=crop'
+  },
+  {
+    id: 'joinery',
+    orderId: '04',
+    title: 'Joinery & Upgrades',
+    shortDescription: 'Custom cabinetry and high-end interior refinements that elevate the architectural character of your home.',
+    fullDescription: 'Precision-crafted joinery and interior upgrades. We create bespoke storage solutions and architectural details that maximize space and refine your interior aesthetic.',
+    features: [
+      'Custom entertainment units',
+      'Architectural wall paneling',
+      'Walk-in wardrobes',
+      'Wine cellar design',
+      'Home office integration'
+    ],
+    image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2000&auto=format&fit=crop'
   }
 ];

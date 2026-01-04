@@ -1,4 +1,12 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide Next.js Dev Badge */
+[data-nextjs-toast] {
+  display: none !important;
+}
 
 @theme {
   /* Colors - Warm Monochromatic Scale */

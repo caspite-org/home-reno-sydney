@@ -7,13 +7,6 @@ import { Button } from './Button';
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const targetId = href.replace('#', '');
-    const elem = document.getElementById(targetId);
-    elem?.scrollIntoView({ behavior: 'smooth' });
-    setIsMenuOpen(false);
-  };
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-4 md:px-12 md:py-6 bg-background/80 backdrop-blur-sm transition-all duration-300">
@@ -30,13 +23,19 @@ export function Navbar() {
           <Link href="/services" className="hover:opacity-70 transition-opacity">
             Services
           </Link>
+          <Link href="/projects" className="hover:opacity-70 transition-opacity">
+            Projects
+          </Link>
+          <Link href="/how-it-works" className="hover:opacity-70 transition-opacity">
+            How It Works
+          </Link>
           <Link href="/about" className="hover:opacity-70 transition-opacity">
             About
           </Link>
-          <Link href="/#projects" onClick={(e) => handleScroll(e, '#projects')} className="hover:opacity-70 transition-opacity">
-            Projects
+          <Link href="/blog" className="hover:opacity-70 transition-opacity">
+            Resources
           </Link>
-          <Link href="/#contact" onClick={(e) => handleScroll(e, '#contact')} className="hover:opacity-70 transition-opacity">
+          <Link href="/contact" className="hover:opacity-70 transition-opacity">
             Contact
           </Link>
         </div>
@@ -44,7 +43,7 @@ export function Navbar() {
 
       {/* Solid Button - Using reusable component */}
       <Button 
-        href="/#contact" 
+        href="/contact" 
         variant="primary"
         size="sm"
         className="hidden md:flex"
@@ -68,17 +67,23 @@ export function Navbar() {
           <Link href="/services" onClick={() => setIsMenuOpen(false)} className="hover:opacity-70">
             Services
           </Link>
+          <Link href="/projects" onClick={() => setIsMenuOpen(false)} className="hover:opacity-70">
+            Projects
+          </Link>
+          <Link href="/how-it-works" onClick={() => setIsMenuOpen(false)} className="hover:opacity-70">
+            How It Works
+          </Link>
           <Link href="/about" onClick={() => setIsMenuOpen(false)} className="hover:opacity-70">
             About
           </Link>
-          <Link href="/#projects" onClick={(e) => handleScroll(e, '#projects')} className="hover:opacity-70">
-            Projects
+          <Link href="/blog" onClick={() => setIsMenuOpen(false)} className="hover:opacity-70">
+            Resources
           </Link>
-          <Link href="/#contact" onClick={(e) => handleScroll(e, '#contact')} className="hover:opacity-70">
+          <Link href="/contact" onClick={() => setIsMenuOpen(false)} className="hover:opacity-70">
             Contact
           </Link>
           <Button 
-            href="/#contact" 
+            href="/contact" 
             variant="primary"
             className="mt-8"
             onClick={() => setIsMenuOpen(false)}

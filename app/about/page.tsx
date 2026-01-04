@@ -36,7 +36,33 @@ export default function AboutPage() {
             <p className="text-lg leading-relaxed text-foreground/60 mb-12">
               We believe that every renovation should be an investment in lifestyle. Our approach combines rigorous project management with an uncompromising eye for detail, ensuring that the results are as enduring as they are beautiful.
             </p>
-            <Button href="/#contact" variant="primary">Work with us</Button>
+            <Button href="/contact" variant="primary">Work with us</Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust & Compliance Section */}
+      <section className="bg-zinc-50 py-24 md:py-32 px-6 md:px-12 border-y border-zinc-200">
+        <div className="max-w-[1800px] mx-auto text-center">
+           <span className="block text-xs font-bold tracking-[0.25em] uppercase mb-8 text-foreground/40">
+            Trust & Reliability
+          </span>
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-16">
+            LICENSED. INSURED. WARRANTED.
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="p-8 bg-white border border-zinc-200">
+              <h3 className="text-xl font-bold uppercase mb-4">NSW LICENCE</h3>
+              <p className="text-foreground/60">Fully licensed builders (Licence No. 345672C) ensuring all work meets strict Australian standards.</p>
+            </div>
+            <div className="p-8 bg-white border border-zinc-200">
+              <h3 className="text-xl font-bold uppercase mb-4">HBCF INSURED</h3>
+              <p className="text-foreground/60">Complete Home Building Compensation Fund (HBCF) insurance for every project over $20k.</p>
+            </div>
+            <div className="p-8 bg-white border border-zinc-200">
+              <h3 className="text-xl font-bold uppercase mb-4">7-YEAR WARRANTY</h3>
+              <p className="text-foreground/60">Peace of mind with a comprehensive 7-year structural warranty on all major renovations.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -70,24 +96,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team/Philosophy Section */}
-      <section className="py-24 md:py-32 px-6 md:px-12 max-w-[1800px] mx-auto text-center">
-        <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-16 max-w-4xl mx-auto leading-[1.1]">
-          WE ARE A COLLECTIVE OF DESIGNERS, MAKERS, AND PROBLEM SOLVERS.
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-          {[1, 2, 3, 4].map((i) => (
-            <div key={i} className="aspect-[3/4] relative bg-gray-100 grayscale hover:grayscale-0 transition-all duration-700 overflow-hidden">
-               <Image 
-                src={`https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop`} 
-                alt="Team member"
-                fill
-                unoptimized
-                className="object-cover"
-              />
-            </div>
-          ))}
-        </div>
+      <section className="mt-32 pb-32 px-6 md:px-12 text-center">
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-8">
+            READY TO START?
+          </h2>
+          <Button href="/contact" variant="primary" size="lg">Get a Quote</Button>
       </section>
     </main>
   );
