@@ -16,7 +16,7 @@ export const POSTS: Post[] = [
     category: 'Budgeting',
     date: 'Oct 12, 2025',
     excerpt: 'Not all upgrades are created equal. We break down which areas of your home yield the highest return on investment, and where you can pull back without compromising quality.',
-    image: 'https://images.unsplash.com/photo-1556910103-1c02745a30bf?q=80&w=1200&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1200&auto=format&fit=crop'
   },
   {
     id: '2',
@@ -34,6 +34,6 @@ export const POSTS: Post[] = [
     category: 'Design',
     date: 'Sep 15, 2025',
     excerpt: 'From the return of the butler\'s pantry to the social island bench, we explore the structural trends that are reshaping how we cook and live.',
-    image: 'https://images.unsplash.com/photo-1556909190-eccf4c8ba7ef?q=80&w=1200&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=1200&auto=format&fit=crop'
   }
 ];

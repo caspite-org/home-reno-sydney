@@ -5,26 +5,52 @@ import { Button } from '@/components/ui/Button'
 import { PROJECTS } from '@/lib/data/projects'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useState } from 'react'
 
 export default function ProjectsPage() {
+  const [filter, setFilter] = useState("All");
+
+  const categories = ["All", "Full Home Renovation", "Kitchen & Bathroom", "Structural Extension"];
+  
+  const filteredProjects = filter === "All" 
+    ? PROJECTS 
+    : PROJECTS.filter(p => p.category === filter);
+
   return (
     <>
       <Navbar />
       <main className="bg-background pt-32 pb-24">
         
         {/* Header */}
-        <section className="px-6 md:px-12 mb-24 max-w-[1800px] mx-auto">
+        <section className="px-6 md:px-12 mb-16 max-w-[1800px] mx-auto">
           <span className="block text-xs font-bold tracking-[0.2em] uppercase mb-6 text-[var(--color-muted)]">
             Portfolio
           </span>
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-12">
             SELECTED <br /> WORKS
           </h1>
+          
+          {/* Filters */}
+          <div className="flex flex-wrap gap-4">
+             {categories.map(cat => (
+               <button 
+                 key={cat}
+                 onClick={() => setFilter(cat)}
+                 className={`px-6 py-3 rounded-full text-sm font-bold uppercase tracking-widest transition-all ${
+                   filter === cat 
+                     ? 'bg-black text-white' 
+                     : 'bg-zinc-100 text-black/60 hover:bg-zinc-200'
+                 }`}
+               >
+                 {cat}
+               </button>
+             ))}
+          </div>
         </section>
 
         {/* Projects Grid */}
         <section className="px-6 md:px-12 max-w-[1800px] mx-auto space-y-32">
-           {PROJECTS.map((project, index) => (
+           {filteredProjects.map((project, index) => (
              <Link href={`/projects/${project.slug}`} key={project.id} className="block group">
                <article className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 lg:gap-24 items-center`}>
                   
@@ -71,7 +97,10 @@ export default function ProjectsPage() {
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-8">
               LIKE WHAT YOU SEE?
             </h2>
-            <Button href="/contact" variant="primary" size="lg">Discuss Your Project</Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+               <Button href="/contact" variant="primary" size="lg">Discuss Your Project</Button>
+               <Button href="/renomate" variant="secondary" size="lg">Estimate Similar</Button>
+            </div>
         </section>
 
       </main>

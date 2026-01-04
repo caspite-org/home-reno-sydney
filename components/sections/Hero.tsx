@@ -2,6 +2,7 @@
 
 import { PrecisionCircle } from "@/components/ui/app-precision/PrecisionCircle";
 import { Button } from "@/components/ui/Button";
+import { Sparkles } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 export function Hero() {
@@ -100,48 +101,33 @@ export function Hero() {
         <PrecisionCircle className="w-[80vh] h-[80vh] opacity-[0.18]" />
       </div>
 
-      <div className="relative z-10 max-w-[1800px] mx-auto w-full">
-        <span className="block text-xs font-bold tracking-[0.25em] uppercase mb-10 text-foreground/60 animate-[fadeIn_0.8s_ease-out]">
-          Sydney&apos;s Architectural Renovation Specialists
-        </span>
-        
-        <h1 className="flex flex-col font-bold leading-[1.05] tracking-[-0.02em] text-foreground">
-          <span className="text-[10vw] md:text-[6rem] lg:text-[7.5rem] xl:text-[8.5rem] animate-[slideInLeft_0.8s_ease-out]">
-            TRANSFORM
+      <div className="relative z-10 px-6 md:px-12 pt-32 h-full flex flex-col justify-center max-w-[1800px] mx-auto">
+        <div className="max-w-4xl">
+          <span className="block text-sm md:text-base font-bold tracking-[0.2em] uppercase mb-8 text-black/60 flex items-center gap-4">
+             <span className="w-12 h-[1px] bg-black"></span>
+             Licensed & Insured: 345672C
           </span>
-          <span className="text-[10vw] md:text-[6rem] lg:text-[7.5rem] xl:text-[8.5rem] ml-[8vw] md:ml-[12vw] animate-[slideInLeft_0.9s_ease-out]"
-          >
-            YOUR SPACE
-          </span>
-        </h1>
-
-        <div className="mt-16 md:mt-20 max-w-xl ml-auto md:mr-[12vw] animate-[fadeIn_1s_ease-out_0.3s_both]">
-          <p className="text-base md:text-lg leading-relaxed text-foreground/80 font-medium mb-10">
-            Precision-engineered renovations that blend architectural excellence with livable design. 
-            <span className="block mt-3 text-foreground/60">
-              Fixed quotes • Transparent timelines • Zero surprises
-            </span>
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.9] mb-8">
+            DESIGN-LED.<br />
+            LICENSED.<br />
+            <span className="text-black/40">ON-BUDGET.</span>
+          </h1>
+          <p className="text-xl md:text-2xl leading-relaxed text-black/60 max-w-2xl mb-12">
+            The complete renovation service for Sydney homeowners & investors. We bridge the gap between architectural design and reliable construction.
           </p>
+          <div className="flex flex-col sm:flex-row gap-6">
+            <Button href="/contact" variant="primary" size="lg">
+              Get a Consultation
+            </Button>
+            <Button href="/renomate" variant="secondary" size="lg" icon={<Sparkles className="w-4 h-4" />}>
+              Try Renomate AI
+            </Button>
+          </div>
           
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button 
-              href="#process"
-              variant="primary"
-              icon={
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              }
-            >
-              See Our Process
-            </Button>
-            <Button 
-              href="#contact"
-              variant="secondary"
-            >
-              Get a Quote
-            </Button>
+          <div className="mt-16 flex items-center gap-8 text-sm font-bold uppercase tracking-widest text-black/40">
+             <span>NSW Builders Licence 345672C</span>
+             <span className="w-1 h-1 bg-black/20 rounded-full"></span>
+             <span>6-Year Structural Warranty</span>
           </div>
         </div>
       </div>
