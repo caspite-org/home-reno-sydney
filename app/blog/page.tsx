@@ -62,20 +62,20 @@ export default function BlogPage() {
 
         {/* Newsletter / Lead Mag */}
         <section className="mt-32 px-6 md:px-12">
-            <div className="max-w-[1800px] mx-auto bg-zinc-100 p-12 md:p-24 text-center">
+            <div className="max-w-[1800px] mx-auto bg-zinc-100 p-8 md:p-24 text-center">
                <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">
                  PLANNING A RENOVATION?
                </h2>
                <p className="text-lg text-[var(--color-muted)] max-w-xl mx-auto mb-12">
                  Join our mailing list to receive our free "Renovation Survival Guide" — 10 things you must know before signing a contract.
                </p>
-               <div className="max-w-md mx-auto flex gap-4">
+               <div className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
                  <input 
                    type="email" 
                    placeholder="Enter your email" 
-                   className="flex-1 bg-white border-none px-6 py-4 focus:ring-1 ring-black outline-none"
+                   className="w-full sm:flex-1 bg-white border-none px-6 py-4 focus:ring-1 ring-black outline-none"
                  />
-                 <Button href="#" variant="primary" size="md">Subscribe</Button>
+                 <Button href="#" variant="primary" size="md" className="w-full sm:w-auto justify-center">Subscribe</Button>
                </div>
             </div>
         </section>

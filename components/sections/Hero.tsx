@@ -86,7 +86,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 pt-24 pb-12 overflow-hidden bg-background">
+    <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 pt-16 md:pt-24 pb-12 overflow-hidden bg-background">
       {/* Interactive Dot Grid Canvas */}
       <canvas
         ref={canvasRef}
@@ -101,7 +101,7 @@ export function Hero() {
         <PrecisionCircle className="w-[80vh] h-[80vh] opacity-[0.18]" />
       </div>
 
-      <div className="relative z-10 px-6 md:px-12 pt-32 h-full flex flex-col justify-center max-w-[1800px] mx-auto">
+      <div className="relative z-10 px-6 md:px-12 pt-12 md:pt-20 h-full flex flex-col justify-center max-w-[1800px] mx-auto">
         <div className="max-w-4xl">
           <span className="block text-sm md:text-base font-bold tracking-[0.2em] uppercase mb-8 text-black/60 flex items-center gap-4">
              <span className="w-12 h-[1px] bg-black"></span>

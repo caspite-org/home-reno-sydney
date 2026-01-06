@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import Image from 'next/image';
 import { Button } from './Button';
 
 export function Navbar() {
@@ -31,16 +32,20 @@ export function Navbar() {
       
       <div className="relative flex items-center justify-between px-6 py-4 md:px-12 md:py-6">
         <div className="flex items-center gap-8 text-foreground">
-          <div className="flex items-center gap-2">
-            {/* Simple Architectural Icon/Logo placeholder */}
-            <div className="w-4 h-4 bg-current" />
-            <div className="flex flex-col">
-              <Link href="/" className="text-lg font-bold tracking-tight uppercase leading-none">
-                Home Reno Sydney
-              </Link>
+          <Link href="/" className="flex items-center gap-2 group">
+            <div className="relative w-40 h-10 transition-transform duration-300 group-hover:scale-[1.02]">
+              <Image
+                src="/images/logo-bold.png"
+                alt="Home Reno Sydney"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+            <div className="flex flex-col border-l border-border pl-3 ml-1">
               <span className="text-[10px] uppercase tracking-widest opacity-60 font-medium">Lic. 345672C</span>
             </div>
-          </div>
+          </Link>
 
           <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide uppercase">
             {navLinks.map((link) => (
