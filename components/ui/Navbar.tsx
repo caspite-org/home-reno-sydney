@@ -43,9 +43,7 @@ export function Navbar() {
                 priority
               />
             </div>
-            <div className="flex flex-col border-l border-border pl-3 ml-1">
-              <span className="text-[10px] uppercase tracking-widest opacity-60 font-medium">Lic. 345672C</span>
-            </div>
+
           </Link>
 
           <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide uppercase">

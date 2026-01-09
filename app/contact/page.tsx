@@ -129,8 +129,8 @@ export default function ContactPage() {
 
              <div>
                 <h3 className="text-xs font-bold uppercase tracking-[0.2em] mb-6 text-[var(--color-muted)]">Direct Contact</h3>
-                <p className="text-2xl font-medium"><a href="mailto:hello@homereno.sydney">hello@homereno.sydney</a></p>
-                <p className="text-2xl font-medium mt-2"><a href="tel:+61292345678">+61 2 9234 5678</a></p>
+                <p className="text-2xl font-medium"><a href="mailto:hello@homerenosydney.com.au">hello@homerenosydney.com.au</a></p>
+                <p className="text-2xl font-medium mt-2"><a href="tel:0459700999">0459 700 999</a></p>
              </div>
 
              <div className="pt-12 border-t border-[var(--color-border)]">

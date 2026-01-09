@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { Instagram, Linkedin, Facebook } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -66,7 +67,17 @@ export function Footer() {
           <div className="flex gap-8 text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--color-muted)]">
             <Link href="/blog" className="hover:text-foreground transition-colors">Blog</Link>
             <Link href="/contact" className="hover:text-foreground transition-colors">Get a Quote</Link>
-            <Link href="#" className="hover:text-foreground transition-colors">Instagram</Link>
+            <div className="flex gap-4">
+              <Link href="#" className="hover:text-foreground transition-colors" aria-label="Instagram">
+                <Instagram className="w-4 h-4" />
+              </Link>
+              <Link href="#" className="hover:text-foreground transition-colors" aria-label="LinkedIn">
+                <Linkedin className="w-4 h-4" />
+              </Link>
+              <Link href="#" className="hover:text-foreground transition-colors" aria-label="Facebook">
+                <Facebook className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
