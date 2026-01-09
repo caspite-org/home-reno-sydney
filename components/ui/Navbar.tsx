@@ -17,7 +17,7 @@ export function Navbar() {
     { href: '/how-it-works', label: 'How It Works' },
     { href: '/about', label: 'About' },
     { href: '/renomate', label: 'Renomate', special: true },
-    { href: '/blog', label: 'Resources' },
+    { href: '/blog', label: 'Blog' },
     { href: '/contact', label: 'Contact' },
   ];
 

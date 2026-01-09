@@ -58,7 +58,7 @@ export function Footer() {
             © {currentYear} HOME RENO SYDNEY — NSW LICENCE 345672C
           </div>
           <div className="flex gap-8 text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--color-muted)]">
-            <Link href="/blog" className="hover:text-foreground transition-colors">Resources</Link>
+            <Link href="/blog" className="hover:text-foreground transition-colors">Blog</Link>
             <Link href="/contact" className="hover:text-foreground transition-colors">Get a Quote</Link>
             <Link href="#" className="hover:text-foreground transition-colors">Instagram</Link>
           </div>
