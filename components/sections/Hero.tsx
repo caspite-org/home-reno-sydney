@@ -109,8 +109,8 @@ export function Hero() {
           </span>
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.9] mb-8">
             DESIGN-LED.<br />
-            LICENSED.<br />
-            <span className="text-black/40">ON-BUDGET.</span>
+            <span className="text-black/40">LICENSED.</span><br />
+            ON-BUDGET.
           </h1>
           <p className="text-xl md:text-2xl leading-relaxed text-black/60 max-w-2xl mb-12">
             The complete renovation service for Sydney homeowners & investors. We bridge the gap between architectural design and reliable construction.

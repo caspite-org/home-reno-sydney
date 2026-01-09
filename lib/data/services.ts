@@ -63,9 +63,24 @@ export const SERVICES: Service[] = [
     features: [
       'Custom entertainment units',
       'Architectural wall paneling',
-      'Walk-in wardrobes',
+
       'Wine cellar design',
       'Home office integration'
+    ],
+    image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2000&auto=format&fit=crop'
+  },
+  {
+    id: 'walk-in-robes',
+    orderId: '05',
+    title: 'Walk-in Robes',
+    shortDescription: 'Luxurious, boutique-style walk-in wardrobes designed for optimal organization and displaying your collection.',
+    fullDescription: 'Transform your daily routine with a boutique-style walk-in robe. We design storage sanctuaries that combine intelligent organization with high-end display features, custom lighting, and premium finishes.',
+    features: [
+      'Boutique island benches',
+      'Shoe and bag display',
+      'Integrated LED lighting',
+      'Makeup vanities',
+      'Full-length mirrors'
     ],
     image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2000&auto=format&fit=crop'
   }

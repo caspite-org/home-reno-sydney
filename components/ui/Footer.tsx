@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,10 +14,14 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-8">
-              <div className="w-4 h-4 bg-foreground" />
-              <span className="text-xl font-bold tracking-tight uppercase">
-                Home Reno Sydney
-              </span>
+              <div className="relative w-40 h-10">
+                <Image
+                  src="/images/logo-bold.png"
+                  alt="Home Reno Sydney"
+                  fill
+                  className="object-contain object-left"
+                />
+              </div>
             </div>
             <p className="text-lg text-[var(--color-muted)] max-w-sm">
               Architectural renovations driven by precision and executed with craftsmanship. Since 2018.
@@ -31,6 +36,7 @@ export function Footer() {
             <ul className="space-y-4 text-sm font-medium uppercase tracking-wide">
               <li><Link href="/" className="hover:opacity-60 transition-opacity">Home</Link></li>
               <li><Link href="/services" className="hover:opacity-60 transition-opacity">Services</Link></li>
+              <li><Link href="/services/walk-in-robes" className="hover:opacity-60 transition-opacity">Walk-in Robes</Link></li>
               <li><Link href="/projects" className="hover:opacity-60 transition-opacity">Projects</Link></li>
               <li><Link href="/how-it-works" className="hover:opacity-60 transition-opacity">How It Works</Link></li>
               <li><Link href="/renomate" className="hover:opacity-60 transition-opacity text-indigo-400">Renomate AI</Link></li>
@@ -46,8 +52,8 @@ export function Footer() {
             <ul className="space-y-4 text-sm font-medium uppercase tracking-wide">
               <li className="text-[var(--color-muted)]">Licence No. 345672C</li>
               <li className="text-[var(--color-muted)]">HBCF Insured</li>
-              <li className="pt-4"><a href="mailto:hello@homereno.sydney" className="hover:opacity-60 transition-opacity">hello@homereno.sydney</a></li>
-              <li><a href="tel:+61290000000" className="hover:opacity-60 transition-opacity">+61 2 9234 5678</a></li>
+              <li className="pt-4"><a href="mailto:hello@homerenosydney.com.au" className="hover:opacity-60 transition-opacity">hello@homerenosydney.com.au</a></li>
+              <li><a href="tel:0459700999" className="hover:opacity-60 transition-opacity">0459 700 999</a></li>
             </ul>
           </div>
 

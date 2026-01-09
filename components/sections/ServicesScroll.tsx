@@ -14,12 +14,12 @@ export function ServicesScroll() {
       <div className="flex flex-col lg:flex-row">
         
         {/* Left Side - Sticky Text */}
-        <div className="lg:w-1/2 p-6 md:p-12 lg:p-24 lg:h-screen lg:sticky lg:top-0 flex flex-col justify-center">
-          <span className="text-xs font-bold tracking-[0.2em] uppercase mb-12 text-[var(--color-muted)]">
+        <div className="lg:w-1/2 p-6 md:p-12 lg:p-12 lg:h-screen lg:sticky lg:top-0 flex flex-col justify-center">
+          <span className="text-xs font-bold tracking-[0.2em] uppercase mb-8 text-[var(--color-muted)]">
             Our Expertise
           </span>
           
-          <div className="space-y-12">
+          <div className="space-y-8">
             {services.map((service) => (
               <div key={service.id} className="group cursor-pointer">
                 <div className="flex items-baseline gap-4 mb-2">
@@ -35,7 +35,7 @@ export function ServicesScroll() {
             ))}
           </div>
 
-          <div className="mt-12 ml-10">
+          <div className="mt-8 ml-10">
              <Link href="/services" className="inline-block text-sm font-bold uppercase tracking-widest border-b border-black pb-1 hover:opacity-50 transition-opacity">
                View All Services
              </Link>
