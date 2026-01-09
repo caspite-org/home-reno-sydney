@@ -2,21 +2,34 @@
 
 import { Navbar } from '@/components/ui/Navbar'
 import { Button } from '@/components/ui/Button'
-import { useState } from 'react'
+import { useActionState } from 'react'
+import { submitInquiry } from '../actions'
+
+const initialState = {
+  success: false,
+  message: ''
+}
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    service: 'kitchen',
-    message: '',
-    budget: '50k-100k'
-  })
+  const [state, formAction, isPending] = useActionState(submitInquiry, initialState)
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    alert('Thank you for your inquiry. Our design team will contact you within 24 hours to schedule a consultation.')
+  if (state.success) {
+    return (
+      <>
+        <Navbar />
+        <main className="bg-background pt-32 pb-24 min-h-screen flex flex-col items-center justify-center text-center px-6">
+          <section className="max-w-2xl animate-in fade-in zoom-in duration-500">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Thank You</h1>
+            <p className="text-xl text-[var(--color-muted)] mb-12">
+              Your inquiry has been received. Our team will review your project details and contact you shortly at simon@caspite.com.
+            </p>
+            <Button href="/" variant="primary">
+              Back to Home
+            </Button>
+          </section>
+        </main>
+      </>
+    )
   }
 
   return (
@@ -41,26 +54,26 @@ export default function ContactPage() {
           
           {/* Form */}
           <div>
-            <form onSubmit={handleSubmit} className="space-y-8">
+            <form action={formAction} className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-widest">Full Name</label>
                   <input 
                     type="text" 
+                    name="name"
                     required
                     className="w-full bg-transparent border-b border-[var(--color-border)] py-4 focus:outline-none focus:border-foreground transition-colors"
                     placeholder="John Doe"
-                    onChange={(e) => setFormData({...formData, name: e.target.value})}
                   />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-widest">Email Address</label>
                   <input 
                     type="email" 
+                    name="email"
                     required
                     className="w-full bg-transparent border-b border-[var(--color-border)] py-4 focus:outline-none focus:border-foreground transition-colors"
                     placeholder="john@example.com"
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
                   />
                 </div>
               </div>
@@ -70,17 +83,18 @@ export default function ContactPage() {
                   <label className="text-xs font-bold uppercase tracking-widest">Phone Number</label>
                   <input 
                     type="tel" 
+                    name="phone"
                     required
                     className="w-full bg-transparent border-b border-[var(--color-border)] py-4 focus:outline-none focus:border-foreground transition-colors"
                     placeholder="+61 400 000 000"
-                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
                   />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-widest">Service Interested In</label>
                   <select 
+                    name="service"
                     className="w-full bg-transparent border-b border-[var(--color-border)] py-4 focus:outline-none focus:border-foreground transition-colors"
-                    onChange={(e) => setFormData({...formData, service: e.target.value})}
+                    defaultValue="kitchen"
                   >
                     <option value="kitchen">Kitchen Renovation</option>
                     <option value="bathroom">Bathroom Renovation</option>
@@ -93,8 +107,9 @@ export default function ContactPage() {
               <div className="space-y-2">
                 <label className="text-xs font-bold uppercase tracking-widest">Estimated Budget</label>
                 <select 
+                  name="budget"
                   className="w-full bg-transparent border-b border-[var(--color-border)] py-4 focus:outline-none focus:border-foreground transition-colors"
-                  onChange={(e) => setFormData({...formData, budget: e.target.value})}
+                  defaultValue="50k-100k"
                 >
                   <option value="30k-50k">$30,000 - $50,000</option>
                   <option value="50k-100k">$50,000 - $100,000</option>
@@ -106,15 +121,15 @@ export default function ContactPage() {
               <div className="space-y-2">
                 <label className="text-xs font-bold uppercase tracking-widest">About Your Project</label>
                 <textarea 
+                  name="message"
                   rows={4}
                   className="w-full bg-transparent border-b border-[var(--color-border)] py-4 focus:outline-none focus:border-foreground transition-colors resize-none"
                   placeholder="Tell us about your dream space..."
-                  onChange={(e) => setFormData({...formData, message: e.target.value})}
                 />
               </div>
 
-              <Button type="submit" variant="primary" className="w-full md:w-auto px-16">
-                Send Inquiry
+              <Button type="submit" variant="primary" className="w-full md:w-auto px-16" disabled={isPending}>
+                {isPending ? 'Sending...' : 'Send Inquiry'}
               </Button>
             </form>
           </div>
@@ -134,8 +149,8 @@ export default function ContactPage() {
              </div>
 
              <div className="pt-12 border-t border-[var(--color-border)]">
-                <h3 className="text-xs font-bold uppercase tracking-[0.2em] mb-6 text-[var(--color-muted)]">Licence & Warranty</h3>
-                <p className="text-sm font-bold uppercase tracking-widest">NSW Licence 345672C</p>
+                <h3 className="text-xs font-bold uppercase tracking-[0.2em] mb-6 text-[var(--color-muted)]">Warranty & Insurance</h3>
+
                 <p className="text-[var(--color-muted)] mt-2">All work is covered by Home Building Compensation Fund (HBCF) insurance and structural warranties.</p>
              </div>
           </div>
@@ -146,3 +161,4 @@ export default function ContactPage() {
     </>
   )
 }
+

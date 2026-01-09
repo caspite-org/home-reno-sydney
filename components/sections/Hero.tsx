@@ -105,7 +105,7 @@ export function Hero() {
         <div className="max-w-4xl">
           <span className="block text-sm md:text-base font-bold tracking-[0.2em] uppercase mb-8 text-black/60 flex items-center gap-4">
              <span className="w-12 h-[1px] bg-black"></span>
-             Licensed & Insured: 345672C
+             Licensed & Insured
           </span>
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.9] mb-8">
             DESIGN-LED.<br />
@@ -125,7 +125,7 @@ export function Hero() {
           </div>
           
           <div className="mt-16 flex items-center gap-8 text-sm font-bold uppercase tracking-widest text-black/40">
-             <span>NSW Builders Licence 345672C</span>
+             <span>Fully Licensed Builders</span>
              <span className="w-1 h-1 bg-black/20 rounded-full"></span>
              <span>6-Year Structural Warranty</span>
           </div>

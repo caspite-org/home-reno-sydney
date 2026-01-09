@@ -7,7 +7,7 @@ export function WhyChooseUs() {
     {
       icon: <ShieldCheck className="w-8 h-8 md:w-10 md:h-10 text-black" />,
       title: "Licensed & Insured",
-      description: "Fully licensed NSW builder (345672C) with comprehensive HBCF insurance for projects over $20k."
+      description: "Fully licensed NSW builder with comprehensive HBCF insurance for projects over $20k."
     },
     {
       icon: <Scale className="w-8 h-8 md:w-10 md:h-10 text-black" />,

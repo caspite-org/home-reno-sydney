@@ -82,6 +82,6 @@ export const SERVICES: Service[] = [
       'Makeup vanities',
       'Full-length mirrors'
     ],
-    image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2000&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1708397016786-8916880649b8?q=80&w=2000&auto=format&fit=crop'
   }
 ];

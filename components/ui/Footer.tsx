@@ -51,7 +51,7 @@ export function Footer() {
               Trust & Contact
             </h4>
             <ul className="space-y-4 text-sm font-medium uppercase tracking-wide">
-              <li className="text-[var(--color-muted)]">Licence No. 345672C</li>
+
               <li className="text-[var(--color-muted)]">HBCF Insured</li>
               <li className="pt-4"><a href="mailto:hello@homerenosydney.com.au" className="hover:opacity-60 transition-opacity">hello@homerenosydney.com.au</a></li>
               <li><a href="tel:0459700999" className="hover:opacity-60 transition-opacity">0459 700 999</a></li>
@@ -62,7 +62,7 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 pt-12 border-t border-[var(--color-border)]">
           <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--color-muted)]">
-            © {currentYear} HOME RENO SYDNEY — NSW LICENCE 345672C
+            © {currentYear} HOME RENO SYDNEY
           </div>
           <div className="flex gap-8 text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--color-muted)]">
             <Link href="/blog" className="hover:text-foreground transition-colors">Blog</Link>

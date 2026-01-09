@@ -52,8 +52,8 @@ export default function AboutPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="p-8 bg-white border border-zinc-200">
-              <h3 className="text-xl font-bold uppercase mb-4">NSW LICENCE</h3>
-              <p className="text-foreground/60">Fully licensed builders (Licence No. 345672C) ensuring all work meets strict Australian standards.</p>
+              <h3 className="text-xl font-bold uppercase mb-4">FULLY LICENSED</h3>
+              <p className="text-foreground/60">Fully licensed builders ensuring all work meets strict Australian standards.</p>
             </div>
             <div className="p-8 bg-white border border-zinc-200">
               <h3 className="text-xl font-bold uppercase mb-4">HBCF INSURED</h3>
@@ -92,6 +92,87 @@ export default function AboutPage() {
                 Our &quot;Zero Surprise&quot; policy means fixed quotes and transparent timelines are at the core of every project agreement.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Team Section */}
+      <section className="py-24 md:py-32 bg-zinc-50 border-y border-zinc-200 px-6 md:px-12">
+        <div className="max-w-[1800px] mx-auto">
+          <span className="block text-xs font-bold tracking-[0.25em] uppercase mb-16 text-center text-foreground/40">
+            Meet the Experts
+          </span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
+            
+            {/* Interior Design Principal */}
+            <div className="group">
+              <div className="aspect-[3/4] relative bg-zinc-200 mb-6 overflow-hidden">
+                <Image 
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800"
+                  alt="Interior Design Principal"
+                  fill
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                />
+              </div>
+              <h3 className="text-lg font-bold uppercase tracking-tight mb-2">Sarah Jenkins</h3>
+              <p className="text-sm font-medium text-indigo-600 mb-4 tracking-wide uppercase text-xs">Interior Design Principal</p>
+              <p className="text-foreground/60 text-sm leading-relaxed">
+                Award-winning designer with a focus on sustainable luxury and spatial flow.
+              </p>
+            </div>
+
+            {/* Construction Supervisor */}
+            <div className="group">
+              <div className="aspect-[3/4] relative bg-zinc-200 mb-6 overflow-hidden">
+                <Image 
+                  src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800"
+                  alt="Construction Supervisor"
+                  fill
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                />
+              </div>
+              <h3 className="text-lg font-bold uppercase tracking-tight mb-2">Mark Roberts</h3>
+              <p className="text-sm font-medium text-indigo-600 mb-4 tracking-wide uppercase text-xs">Construction Supervisor</p>
+              <p className="text-foreground/60 text-sm leading-relaxed">
+                Master builder ensuring every join and finish meets our rigorous standards.
+              </p>
+            </div>
+
+            {/* Home & Construction Data Analyst */}
+            <div className="group">
+              <div className="aspect-[3/4] relative bg-zinc-200 mb-6 overflow-hidden">
+                <Image 
+                  src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=800"
+                  alt="Data Analyst"
+                  fill
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                />
+              </div>
+              <h3 className="text-lg font-bold uppercase tracking-tight mb-2">Emily Chen</h3>
+              <p className="text-sm font-medium text-indigo-600 mb-4 tracking-wide uppercase text-xs">Home & Construction Data Analyst</p>
+              <p className="text-foreground/60 text-sm leading-relaxed">
+                Optimizing project timelines and budgets through predictive modeling.
+              </p>
+            </div>
+
+            {/* AI Mastermind */}
+            <div className="group">
+              <div className="aspect-[3/4] relative bg-zinc-200 mb-6 overflow-hidden">
+                <Image 
+                  src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800"
+                  alt="AI Mastermind"
+                  fill
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                />
+              </div>
+              <h3 className="text-lg font-bold uppercase tracking-tight mb-2">Aria</h3>
+              <p className="text-sm font-medium text-indigo-600 mb-4 tracking-wide uppercase text-xs">AI Mastermind</p>
+              <p className="text-foreground/60 text-sm leading-relaxed">
+                Our advanced neural network architecting the future of renovated living.
+              </p>
+            </div>
+
           </div>
         </div>
       </section>

@@ -46,7 +46,7 @@ export default function WalkInRobesPage() {
           </h1>
           <div className="aspect-video relative bg-zinc-200 overflow-hidden">
              <Image 
-              src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2000&auto=format&fit=crop"
+              src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2000&auto=format&fit=crop"
               alt="Luxury Walk-in Robe"
               fill
               unoptimized
