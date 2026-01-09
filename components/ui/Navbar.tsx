@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import Image from 'next/image';
+import { Menu, X } from 'lucide-react';
 import { Button } from './Button';
 
 export function Navbar() {
@@ -80,9 +81,9 @@ export function Navbar() {
         <button 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
-          className={`md:hidden relative z-50 uppercase text-xs font-bold tracking-widest ${isMenuOpen ? 'text-black mix-blend-normal' : 'text-foreground'}`}
+          className="md:hidden relative z-50 text-indigo-600 hover:text-indigo-700 transition-colors"
         >
-          {isMenuOpen ? 'Close' : 'Menu'}
+          {isMenuOpen ? <X size={32} strokeWidth={2.5} /> : <Menu size={32} strokeWidth={2.5} />}
         </button>
       </div>
 
