@@ -167,7 +167,7 @@ export default function AboutPage() {
                 />
               </div>
               <h3 className="text-lg font-bold uppercase tracking-tight mb-2">Aria</h3>
-              <p className="text-sm font-medium text-indigo-600 mb-4 tracking-wide uppercase text-xs">AI Mastermind</p>
+              <p className="text-sm font-medium text-blue-600 mb-4 tracking-wide uppercase text-xs">AI Mastermind</p>
               <p className="text-foreground/60 text-sm leading-relaxed">
                 Our advanced neural network architecting the future of renovated living.
               </p>

@@ -53,7 +53,7 @@ export function Navbar() {
                 href={link.href} 
                 className={`transition-all duration-300 ${
                   link.special 
-                    ? 'text-indigo-600 font-bold hover:opacity-80' 
+                    ? 'text-blue-600 font-bold hover:opacity-80' 
                     : isActive(link.href)
                       ? 'text-foreground opacity-100 font-bold decoration-2 underline-offset-8 underline'
                       : 'text-foreground/60 hover:text-foreground hover:opacity-100'
@@ -94,7 +94,7 @@ export function Navbar() {
               href={link.href} 
               onClick={() => setIsMenuOpen(false)} 
               className={`hover:opacity-70 ${
-                 link.special ? 'text-indigo-600' : ''
+                 link.special ? 'text-blue-600' : ''
               } ${
                 isActive(link.href) ? 'underline underline-offset-8' : ''
               }`}

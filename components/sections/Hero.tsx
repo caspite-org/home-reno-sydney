@@ -119,7 +119,7 @@ export function Hero() {
             <Button href="/contact" variant="primary" size="lg">
               Get a Consultation
             </Button>
-            <Button href="/renomate" variant="secondary" size="lg" icon={<Sparkles className="w-4 h-4" />}>
+            <Button href="/renomate" variant="secondary" size="lg" icon={<Sparkles className="w-4 h-4" />} className="hover:bg-blue-600 hover:border-blue-600 hover:text-white">
               Try Renomate AI
             </Button>
           </div>
