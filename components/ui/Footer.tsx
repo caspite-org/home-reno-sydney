@@ -37,7 +37,8 @@ export function Footer() {
             <ul className="space-y-4 text-sm font-medium uppercase tracking-wide">
               <li><Link href="/" className="hover:opacity-60 transition-opacity">Home</Link></li>
               <li><Link href="/services" className="hover:opacity-60 transition-opacity">Services</Link></li>
-              <li><Link href="/services/walk-in-robes" className="hover:opacity-60 transition-opacity">Walk-in Robes</Link></li>
+              <li><Link href="/services/walk-in-robes" className="hover:opacity-60 transition-opacity">Boutique Dressing Rooms</Link></li>
+              <li><Link href="/services/laundry" className="hover:opacity-60 transition-opacity">Bespoke Laundries</Link></li>
               <li><Link href="/projects" className="hover:opacity-60 transition-opacity">Projects</Link></li>
               <li><Link href="/how-it-works" className="hover:opacity-60 transition-opacity">How It Works</Link></li>
               <li><Link href="/renomate" className="hover:opacity-60 transition-opacity text-blue-600">Renomate AI</Link></li>

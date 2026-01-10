@@ -55,26 +55,11 @@ export const SERVICES: Service[] = [
     image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=2000&auto=format&fit=crop'
   },
   {
-    id: 'joinery',
-    orderId: '04',
-    title: 'Joinery & Upgrades',
-    shortDescription: 'Custom cabinetry and high-end interior refinements that elevate the architectural character of your home.',
-    fullDescription: 'Precision-crafted joinery and interior upgrades. We create bespoke storage solutions and architectural details that maximize space and refine your interior aesthetic.',
-    features: [
-      'Custom entertainment units',
-      'Architectural wall paneling',
-
-      'Wine cellar design',
-      'Home office integration'
-    ],
-    image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2000&auto=format&fit=crop'
-  },
-  {
     id: 'walk-in-robes',
-    orderId: '05',
-    title: 'Walk-in Robes',
-    shortDescription: 'Luxurious, boutique-style walk-in wardrobes designed for optimal organization and displaying your collection.',
-    fullDescription: 'Transform your daily routine with a boutique-style walk-in robe. We design storage sanctuaries that combine intelligent organization with high-end display features, custom lighting, and premium finishes.',
+    orderId: '04',
+    title: 'Boutique Dressing Rooms',
+    shortDescription: 'Showroom-style sanctuaries designed to showcase your collection with bespoke joinery and lighting.',
+    fullDescription: 'More than just storage, we create private sanctuaries for your daily rituals. Think integrated lighting, island displays, and premium finishes that turn your wardrobe into a high-end boutique.',
     features: [
       'Boutique island benches',
       'Shoe and bag display',
@@ -83,5 +68,34 @@ export const SERVICES: Service[] = [
       'Full-length mirrors'
     ],
     image: 'https://images.unsplash.com/photo-1708397016786-8916880649b8?q=80&w=2000&auto=format&fit=crop'
+  },
+  {
+    id: 'laundry',
+    orderId: '05',
+    title: 'Bespoke Laundries',
+    shortDescription: 'Functional heavy-lifters discreetly disguised as elegant, seamless extensions of your home\'s aesthetic.',
+    fullDescription: 'We believe utility spaces deserve the same design attention as the rest of your home. Our custom laundry solutions maximize storage and efficiency while maintaining a cohesive, high-end look.',
+    features: [
+      'Custom cabinetry',
+      'Stone benchtops',
+      'Stacked appliance integration',
+      'Hidden hampers',
+      'Drying rails'
+    ],
+    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=2000&auto=format&fit=crop'
+  },
+  {
+    id: 'joinery',
+    orderId: '06',
+    title: 'Joinery & Upgrades',
+    shortDescription: 'Custom cabinetry and high-end interior refinements that elevate the architectural character of your home.',
+    fullDescription: 'Precision-crafted joinery and interior upgrades. We create bespoke storage solutions and architectural details that maximize space and refine your interior aesthetic.',
+    features: [
+      'Custom entertainment units',
+      'Architectural wall paneling',
+      'Wine cellar design',
+      'Home office integration'
+    ],
+    image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2000&auto=format&fit=crop'
   }
 ];
